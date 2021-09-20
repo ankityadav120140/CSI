@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, duplicate_ignore, unnecessary_new, use_key_in_widget_constructors
+
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
@@ -17,6 +19,7 @@ class OurFeaturesScreen extends StatelessWidget {
       decoration: BoxDecoration(
         color: HexColor('#E7F3FF'),
         borderRadius: BorderRadius.circular(20),
+        // ignore: prefer_const_literals_to_create_immutables
         boxShadow: [
           BoxShadow(
             color: Colors.black12,

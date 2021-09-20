@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, avoid_unnecessary_containers
+
 import 'package:csi/screens/contact_us_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -11,7 +13,7 @@ class AppDrawer extends StatefulWidget {
 }
 
 class _AppDrawerState extends State<AppDrawer> {
-  bool teamDrop = false;
+  bool teamDrop = false, wwd = false, evDrop = false, wrkDrop = false;
 
   @override
   Widget build(BuildContext context) {
@@ -114,14 +116,348 @@ class _AppDrawerState extends State<AppDrawer> {
                             color: Colors.black,
                           ),
                         ),
+                        trailing: wwd
+                            ? Icon(
+                                Icons.keyboard_arrow_up,
+                                color: HexColor('#2D2871'),
+                              )
+                            : Icon(
+                                Icons.keyboard_arrow_down,
+                                color: HexColor('#2D2871'),
+                              ),
                         onTap: () {
-                          // Navigator.of(context).pushReplacementNamed(Screen.routeName);
+                          if (wwd == false) {
+                            wwd = true;
+                            setState(() {});
+                          } else if (wwd == true) {
+                            wwd = false;
+                            setState(() {});
+                          }
                         },
-                        trailing: Icon(
-                          Icons.keyboard_arrow_down,
-                          color: HexColor('#2D2871'),
-                        ),
                       ),
+                      if (wwd)
+                        Container(
+                          // margin: const EdgeInsets.only(left: 50),
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [Colors.white, Colors.white10],
+                              // begin: Alignment.bottomLeft,
+                              // end: Alignment.topRight,
+                              stops: [0.1, 0.9],
+                            ),
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                          ),
+                          child: Column(
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.only(left: 30),
+                                child: ListTile(
+                                  leading: Icon(
+                                    Icons.verified_outlined,
+                                    color: HexColor('#2D2871'),
+                                  ),
+                                  title: Text(
+                                    "Events",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  trailing: evDrop
+                                      ? Icon(
+                                          Icons.keyboard_arrow_up,
+                                          color: HexColor('#2D2871'),
+                                        )
+                                      : Icon(
+                                          Icons.keyboard_arrow_down,
+                                          color: HexColor('#2D2871'),
+                                        ),
+                                  onTap: () {
+                                    if (evDrop == false) {
+                                      evDrop = true;
+                                      setState(() {});
+                                    } else if (evDrop == true) {
+                                      evDrop = false;
+                                      setState(() {});
+                                    }
+                                  },
+                                ),
+                              ),
+                              if (evDrop)
+                                Container(
+                                  margin: const EdgeInsets.only(left: 25),
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [Colors.white, Colors.white10],
+                                      // begin: Alignment.bottomLeft,
+                                      // end: Alignment.topRight,
+                                      stops: [0.1, 0.9],
+                                    ),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(10)),
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        margin: const EdgeInsets.only(left: 30),
+                                        child: ListTile(
+                                          leading: Icon(
+                                            Icons.verified_outlined,
+                                            color: HexColor('#2D2871'),
+                                          ),
+                                          title: Text(
+                                            "CINE",
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                          onTap: () {
+                                            Navigator.pushNamed(
+                                              context,
+                                              'cine',
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: const EdgeInsets.only(left: 30),
+                                        child: ListTile(
+                                          leading: Icon(
+                                            Icons.verified_outlined,
+                                            color: HexColor('#2D2871'),
+                                          ),
+                                          title: Text(
+                                            "The Initiative",
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                          onTap: () {
+                                            Navigator.pushNamed(
+                                              context,
+                                              'the_initiative',
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: const EdgeInsets.only(left: 30),
+                                        child: ListTile(
+                                          leading: Icon(
+                                            Icons.verified_outlined,
+                                            color: HexColor('#2D2871'),
+                                          ),
+                                          title: Text(
+                                            "RDM",
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                          onTap: () {
+                                            Navigator.pushNamed(context, 'rdm');
+                                          },
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: const EdgeInsets.only(left: 30),
+                                        child: ListTile(
+                                          leading: Icon(
+                                            Icons.verified_outlined,
+                                            color: HexColor('#2D2871'),
+                                          ),
+                                          title: Text(
+                                            "Vacanza",
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                          onTap: () {
+                                            Navigator.pushNamed(
+                                                context, 'vacanza');
+                                          },
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              Container(
+                                margin: const EdgeInsets.only(left: 30),
+                                child: ListTile(
+                                  leading: Icon(
+                                    Icons.verified_outlined,
+                                    color: HexColor('#2D2871'),
+                                  ),
+                                  title: Text(
+                                    "Workshop",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  trailing: wrkDrop
+                                      ? Icon(
+                                          Icons.keyboard_arrow_up,
+                                          color: HexColor('#2D2871'),
+                                        )
+                                      : Icon(
+                                          Icons.keyboard_arrow_down,
+                                          color: HexColor('#2D2871'),
+                                        ),
+                                  onTap: () {
+                                    if (wrkDrop == false) {
+                                      wrkDrop = true;
+                                      setState(() {});
+                                    } else if (wrkDrop == true) {
+                                      wrkDrop = false;
+                                      setState(() {});
+                                    }
+                                  },
+                                ),
+                              ),
+                              if (wrkDrop)
+                                Container(
+                                  margin: const EdgeInsets.only(left: 25),
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [Colors.white, Colors.white10],
+                                      // begin: Alignment.bottomLeft,
+                                      // end: Alignment.topRight,
+                                      stops: [0.1, 0.9],
+                                    ),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(10)),
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        margin: const EdgeInsets.only(left: 30),
+                                        child: ListTile(
+                                          leading: Icon(
+                                            Icons.verified_outlined,
+                                            color: HexColor('#2D2871'),
+                                          ),
+                                          title: Text(
+                                            "UI With MongoDB",
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                          onTap: () {},
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: const EdgeInsets.only(left: 30),
+                                        child: ListTile(
+                                          leading: Icon(
+                                            Icons.verified_outlined,
+                                            color: HexColor('#2D2871'),
+                                          ),
+                                          title: Text(
+                                            "Java And Android",
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                          onTap: () {},
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: const EdgeInsets.only(left: 30),
+                                        child: ListTile(
+                                          leading: Icon(
+                                            Icons.verified_outlined,
+                                            color: HexColor('#2D2871'),
+                                          ),
+                                          title: Text(
+                                            "Ethical Hacking",
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                          onTap: () {},
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: const EdgeInsets.only(left: 30),
+                                        child: ListTile(
+                                          leading: Icon(
+                                            Icons.verified_outlined,
+                                            color: HexColor('#2D2871'),
+                                          ),
+                                          title: Text(
+                                            "Wev Development",
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                          onTap: () {},
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: const EdgeInsets.only(left: 30),
+                                        child: ListTile(
+                                          leading: Icon(
+                                            Icons.verified_outlined,
+                                            color: HexColor('#2D2871'),
+                                          ),
+                                          title: Text(
+                                            "Web Tech With Angular",
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                          onTap: () {},
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: const EdgeInsets.only(left: 30),
+                                        child: ListTile(
+                                          leading: Icon(
+                                            Icons.verified_outlined,
+                                            color: HexColor('#2D2871'),
+                                          ),
+                                          title: Text(
+                                            "Blockchain",
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                          onTap: () {},
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: const EdgeInsets.only(left: 30),
+                                        child: ListTile(
+                                          leading: Icon(
+                                            Icons.verified_outlined,
+                                            color: HexColor('#2D2871'),
+                                          ),
+                                          title: Text(
+                                            "Nodejs With MongoDB",
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                          onTap: () {},
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                            ],
+                          ),
+                        ),
                       ListTile(
                         leading: Icon(
                           Icons.group,
@@ -153,101 +489,97 @@ class _AppDrawerState extends State<AppDrawer> {
                           }
                         },
                       ),
-                      teamDrop
-                          ? Container(
-                              // margin: const EdgeInsets.only(left: 50),
-                              decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                  colors: [Colors.white, Colors.white10],
-                                  // begin: Alignment.bottomLeft,
-                                  // end: Alignment.topRight,
-                                  stops: [0.1, 0.9],
-                                ),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                              ),
-                              child: Column(
-                                children: [
-                                  Container(
-                                    margin: const EdgeInsets.only(left: 30),
-                                    child: ListTile(
-                                      leading: Icon(
-                                        Icons.verified_outlined,
-                                        color: HexColor('#2D2871'),
-                                      ),
-                                      title: Text(
-                                        "Second Year",
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          color: Colors.black,
-                                        ),
-                                      ),
-                                      onTap: () {
-                                        Navigator.pushNamed(
-                                            context, 'second_year');
-                                      },
-                                    ),
-                                  ),
-                                  Container(
-                                    margin: const EdgeInsets.only(left: 30),
-                                    child: ListTile(
-                                      leading: Icon(
-                                        Icons.verified_outlined,
-                                        color: HexColor('#2D2871'),
-                                      ),
-                                      title: Text(
-                                        "Third Year",
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          color: Colors.black,
-                                        ),
-                                      ),
-                                      onTap: () {
-                                        Navigator.pushNamed(
-                                            context, 'third_year');
-                                      },
-                                    ),
-                                  ),
-                                  Container(
-                                    margin: const EdgeInsets.only(left: 30),
-                                    child: ListTile(
-                                      leading: Icon(
-                                        Icons.verified_outlined,
-                                        color: HexColor('#2D2871'),
-                                      ),
-                                      title: Text(
-                                        "Fourth Year",
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          color: Colors.black,
-                                        ),
-                                      ),
-                                      onTap: () {
-                                        Navigator.pushNamed(
-                                            context, 'fourth_year');
-                                      },
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            )
-                          : ListTile(
-                              //join us
-                              leading: Icon(
-                                Icons.queue,
-                                color: HexColor('#2D2871'),
-                              ),
-                              title: Text(
-                                'Join Us',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.black,
-                                ),
-                              ),
-                              onTap: () {
-                                // Navigator.of(context).pushReplacementNamed(Screen.routeName);
-                              },
+                      if (teamDrop)
+                        Container(
+                          // margin: const EdgeInsets.only(left: 50),
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [Colors.white, Colors.white10],
+                              // begin: Alignment.bottomLeft,
+                              // end: Alignment.topRight,
+                              stops: [0.1, 0.9],
                             ),
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                          ),
+                          child: Column(
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.only(left: 30),
+                                child: ListTile(
+                                  leading: Icon(
+                                    Icons.verified_outlined,
+                                    color: HexColor('#2D2871'),
+                                  ),
+                                  title: Text(
+                                    "Second Year",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  onTap: () {
+                                    Navigator.pushNamed(context, 'second_year');
+                                  },
+                                ),
+                              ),
+                              Container(
+                                margin: const EdgeInsets.only(left: 30),
+                                child: ListTile(
+                                  leading: Icon(
+                                    Icons.verified_outlined,
+                                    color: HexColor('#2D2871'),
+                                  ),
+                                  title: Text(
+                                    "Third Year",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  onTap: () {
+                                    Navigator.pushNamed(context, 'third_year');
+                                  },
+                                ),
+                              ),
+                              Container(
+                                margin: const EdgeInsets.only(left: 30),
+                                child: ListTile(
+                                  leading: Icon(
+                                    Icons.verified_outlined,
+                                    color: HexColor('#2D2871'),
+                                  ),
+                                  title: Text(
+                                    "Fourth Year",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  onTap: () {
+                                    Navigator.pushNamed(context, 'fourth_year');
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ListTile(
+                        //join us
+                        leading: Icon(
+                          Icons.queue,
+                          color: HexColor('#2D2871'),
+                        ),
+                        title: Text(
+                          'Join Us',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                          ),
+                        ),
+                        onTap: () {
+                          // Navigator.of(context).pushReplacementNamed(Screen.routeName);
+                        },
+                      ),
                       ListTile(
                         //contact us
                         leading: Icon(

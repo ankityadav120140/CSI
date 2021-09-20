@@ -1,16 +1,18 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, unnecessary_new, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, unnecessary_new, use_key_in_widget_constructors, camel_case_types
 
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import '../widgets/app_drawer.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class HomeScreen extends StatefulWidget {
+class rdm extends StatefulWidget {
+  const rdm({Key? key}) : super(key: key);
+
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _rdmState createState() => _rdmState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _rdmState extends State<rdm> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   @override
@@ -65,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     // padding: EdgeInsets.all(30),
 
                     child: Text(
-                      'Home',
+                      'RDM',
                       style: TextStyle(
                         color: Colors.black,
                         fontFamily: 'Poppins',
@@ -104,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Container(
                         alignment: Alignment.center,
                         height: 50,
-                        width: 136,
+                        width: 200,
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
                             colors: [HexColor('#79B6FC'), Colors.white],
@@ -114,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         child: Text(
-                          'Who we are',
+                          'ROUTE-DE-MOKSHA',
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
@@ -130,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       top: mediaQuery.size.height * 0.06,
                     ),
                     child: Text(
-                      'Team CSI',
+                      'RDM',
                       style: TextStyle(
                           fontSize: 35,
                           fontFamily: 'Poppins',
@@ -144,7 +146,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     width: mediaQuery.size.width * 0.7,
                     child: Text(
-                      'The COMPUTER SOCIETY OF INDIA (acronym as CSI) was formed in the year 1965. Since its inception, CSI has been paving the way for the IT industry to advance in the right direction. By indulging within itself most famous IT leaders, brilliant scientists and dedicated academicians.',
+                      "Players got to use their logical senses to unravel the question and move to further level.As the game got going the difficulty level of question increased,though hint were provided to ease their nerve. The event was declared closed on the last day of the \"TECHTRISHNA\" annual TechFest. The player reach the last designed level first was declared as a Winner.",
                       style: TextStyle(
                         height: 1.3,
                         letterSpacing: 1.5,
@@ -167,7 +169,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           horizontal: 15,
                         ),
                         child: Text(
-                          'Know More',
+                          'Register Now',
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
@@ -180,9 +182,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       elevation: 5,
                       color: HexColor('#79B6FC'),
-                      onPressed: () {
-                        Navigator.pushNamed(context, 'about_us');
-                      },
+                      onPressed: () {},
                     ),
                   ),
                 ],

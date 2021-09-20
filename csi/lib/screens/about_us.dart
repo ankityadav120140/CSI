@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, camel_case_types, unnecessary_new, avoid_unnecessary_containers
 
 import 'package:csi/widgets/app_drawer.dart';
 import 'package:flutter/material.dart';

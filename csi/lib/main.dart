@@ -1,4 +1,10 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:csi/screens/about_us.dart';
+import 'package:csi/screens/cine.dart';
+import 'package:csi/screens/rdm.dart';
+import 'package:csi/screens/the_initiative.dart';
+import 'package:csi/screens/vacanza.dart';
 import 'package:flutter/material.dart';
 
 import './screens/home_page_screen.dart';
@@ -28,6 +34,10 @@ class MyApp extends StatelessWidget {
         'third_year': (context) => ThirdYearScreen(),
         'fourth_year': (context) => FourthYearScreen(),
         'about_us': (context) => const aboutUs(),
+        'cine': (context) => const cine(),
+        'the_initiative': (context) => const the_initiative(),
+        'rdm': (context) => const rdm(),
+        'vacanza': (context) => const vacanza(),
       },
     );
   }

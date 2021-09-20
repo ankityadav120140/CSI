@@ -1,18 +1,19 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, unnecessary_new, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, unnecessary_new, use_key_in_widget_constructors, camel_case_types
 
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import '../widgets/app_drawer.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class HomeScreen extends StatefulWidget {
+class the_initiative extends StatefulWidget {
+  const the_initiative({Key? key}) : super(key: key);
+
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _the_initiativeState createState() => _the_initiativeState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _the_initiativeState extends State<the_initiative> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
@@ -65,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     // padding: EdgeInsets.all(30),
 
                     child: Text(
-                      'Home',
+                      'THE INITIATIVE',
                       style: TextStyle(
                         color: Colors.black,
                         fontFamily: 'Poppins',
@@ -114,7 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         child: Text(
-                          'Who we are',
+                          'THE INITIATIVE',
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
@@ -130,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       top: mediaQuery.size.height * 0.06,
                     ),
                     child: Text(
-                      'Team CSI',
+                      'THE INITIATIVE',
                       style: TextStyle(
                           fontSize: 35,
                           fontFamily: 'Poppins',
@@ -144,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     width: mediaQuery.size.width * 0.7,
                     child: Text(
-                      'The COMPUTER SOCIETY OF INDIA (acronym as CSI) was formed in the year 1965. Since its inception, CSI has been paving the way for the IT industry to advance in the right direction. By indulging within itself most famous IT leaders, brilliant scientists and dedicated academicians.',
+                      "THE INITIATIVE is the national level ,inter college event organised by team CSI every year. This event is a hybrid of real life tasks and a closed corridor presentation , and aims at bringing out the lost questioner from an Indian prodigy , who in many ways presents the answer himself . The main aim of organizing this event is to brainstorm the minds of young students about the burning issues in the country.",
                       style: TextStyle(
                         height: 1.3,
                         letterSpacing: 1.5,
@@ -167,7 +168,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           horizontal: 15,
                         ),
                         child: Text(
-                          'Know More',
+                          'Register Now',
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
@@ -180,9 +181,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       elevation: 5,
                       color: HexColor('#79B6FC'),
-                      onPressed: () {
-                        Navigator.pushNamed(context, 'about_us');
-                      },
+                      onPressed: () {},
                     ),
                   ),
                 ],

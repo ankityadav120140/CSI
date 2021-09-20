@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, unnecessary_new, use_key_in_widget_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, duplicate_ignore
+
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/svg.dart';
@@ -187,6 +189,7 @@ class ContactUs extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: HexColor('#E7F3FF'),
                       borderRadius: BorderRadius.circular(32),
+                      // ignore: prefer_const_literals_to_create_immutables
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black26,
@@ -213,6 +216,7 @@ class ContactUs extends StatelessWidget {
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              // ignore: prefer_const_literals_to_create_immutables
                               children: <Widget>[
                                 Text(
                                   'Address',
@@ -246,6 +250,7 @@ class ContactUs extends StatelessWidget {
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              // ignore: prefer_const_literals_to_create_immutables
                               children: <Widget>[
                                 Text(
                                   'E-mail',
@@ -279,6 +284,7 @@ class ContactUs extends StatelessWidget {
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              // ignore: prefer_const_literals_to_create_immutables
                               children: <Widget>[
                                 Text(
                                   'Call Us',
