@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, unnecessary_new, use_key_in_widget_constructors, camel_case_types
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, unnecessary_new, use_key_in_widget_constructors, camel_case_types, deprecated_member_use, dead_code
 
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -14,11 +14,10 @@ class cine extends StatefulWidget {
 
 class _cineState extends State<cine> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
-    var year = 2021;
+    bool reg = true;
     return Scaffold(
       backgroundColor: HexColor('#E7F3FF'),
       key: _scaffoldKey,
@@ -35,7 +34,7 @@ class _cineState extends State<cine> {
               decoration: BoxDecoration(
                 color: HexColor('#E7F3FF'),
                 image: DecorationImage(
-                  image: AssetImage('assets/images/home_page_bg.png'),
+                  image: AssetImage('assets/images/cineBg.png'),
                   fit: BoxFit.fitHeight,
                 ),
               ),
@@ -66,16 +65,16 @@ class _cineState extends State<cine> {
                     ),
                     // padding: EdgeInsets.all(30),
 
-                    child: Text(
-                      'CINE',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w600,
-                        fontSize: 45,
-                        letterSpacing: 2,
-                      ),
-                    ),
+                    // child: Text(
+                    //   'CINE',
+                    //   style: TextStyle(
+                    //     color: Colors.black,
+                    //     fontFamily: 'Poppins',
+                    //     fontWeight: FontWeight.w600,
+                    //     fontSize: 45,
+                    //     letterSpacing: 2,
+                    //   ),
+                    // ),
                   )
                 ],
               ),
@@ -96,36 +95,36 @@ class _cineState extends State<cine> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Container(
-                    // margin: EdgeInsets.only(top: mediaQuery.size.height * 0.04),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(32),
-                        bottomRight: Radius.circular(32),
-                      ),
-                      child: Container(
-                        alignment: Alignment.center,
-                        height: 50,
-                        width: 136,
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [HexColor('#79B6FC'), Colors.white],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            stops: [0.5, 1.8],
-                          ),
-                        ),
-                        child: Text(
-                          'CINE $year',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ),
-                    ),
-                  ),
+                  // Container(
+                  //   // margin: EdgeInsets.only(top: mediaQuery.size.height * 0.04),
+                  //   child: ClipRRect(
+                  //     borderRadius: BorderRadius.only(
+                  //       topRight: Radius.circular(32),
+                  //       bottomRight: Radius.circular(32),
+                  //     ),
+                  //     child: Container(
+                  //       alignment: Alignment.center,
+                  //       height: 50,
+                  //       width: 136,
+                  //       decoration: BoxDecoration(
+                  //         gradient: LinearGradient(
+                  //           colors: [HexColor('#79B6FC'), Colors.white],
+                  //           begin: Alignment.topLeft,
+                  //           end: Alignment.bottomRight,
+                  //           stops: [0.5, 1.8],
+                  //         ),
+                  //       ),
+                  //       child: Text(
+                  //         'CINE $year',
+                  //         style: TextStyle(
+                  //             color: Colors.white,
+                  //             fontSize: 16,
+                  //             fontFamily: 'Poppins',
+                  //             fontWeight: FontWeight.w500),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                   Container(
                     margin: EdgeInsets.only(
                       left: mediaQuery.size.height * 0.03,
@@ -161,29 +160,51 @@ class _cineState extends State<cine> {
                       left: mediaQuery.size.height * 0.03,
                       top: mediaQuery.size.height * 0.10,
                     ),
-                    // ignore: deprecated_member_use
-                    child: RaisedButton(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 18,
-                          horizontal: 15,
-                        ),
-                        child: Text(
-                          'Register Now',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(32),
-                      ),
-                      elevation: 5,
-                      color: HexColor('#79B6FC'),
-                      onPressed: () {},
-                    ),
+                    child: reg
+                        ? RaisedButton(
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                vertical: 18,
+                                horizontal: 15,
+                              ),
+                              child: Text(
+                                'Register Now',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(32),
+                            ),
+                            elevation: 5,
+                            color: HexColor('#3bd482'),
+                            onPressed: () {},
+                          )
+                        : RaisedButton(
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                vertical: 18,
+                                horizontal: 15,
+                              ),
+                              child: Text(
+                                'Registration Closed',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.w500),
+                              ),
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(32),
+                            ),
+                            elevation: 5,
+                            color: HexColor('#db694f'),
+                            onPressed: () {},
+                          ),
                   ),
                 ],
               ),
