@@ -347,7 +347,12 @@ class _AppDrawerState extends State<AppDrawer> {
                                               color: Colors.black,
                                             ),
                                           ),
-                                          onTap: () {},
+                                          onTap: () {
+                                            Navigator.pushNamed(
+                                              context,
+                                              'ui_with_mongo',
+                                            );
+                                          },
                                         ),
                                       ),
                                       Container(
@@ -364,7 +369,10 @@ class _AppDrawerState extends State<AppDrawer> {
                                               color: Colors.black,
                                             ),
                                           ),
-                                          onTap: () {},
+                                          onTap: () {
+                                            Navigator.pushNamed(
+                                                context, 'java_and_android');
+                                          },
                                         ),
                                       ),
                                       Container(
@@ -381,7 +389,10 @@ class _AppDrawerState extends State<AppDrawer> {
                                               color: Colors.black,
                                             ),
                                           ),
-                                          onTap: () {},
+                                          onTap: () {
+                                            Navigator.pushNamed(
+                                                context, 'ethical_hacking');
+                                          },
                                         ),
                                       ),
                                       Container(
@@ -398,7 +409,10 @@ class _AppDrawerState extends State<AppDrawer> {
                                               color: Colors.black,
                                             ),
                                           ),
-                                          onTap: () {},
+                                          onTap: () {
+                                            Navigator.pushNamed(
+                                                context, 'web_dev');
+                                          },
                                         ),
                                       ),
                                       Container(
@@ -415,7 +429,10 @@ class _AppDrawerState extends State<AppDrawer> {
                                               color: Colors.black,
                                             ),
                                           ),
-                                          onTap: () {},
+                                          onTap: () {
+                                            Navigator.pushNamed(
+                                                context, 'web_tech_with_ang');
+                                          },
                                         ),
                                       ),
                                       Container(
@@ -432,7 +449,10 @@ class _AppDrawerState extends State<AppDrawer> {
                                               color: Colors.black,
                                             ),
                                           ),
-                                          onTap: () {},
+                                          onTap: () {
+                                            Navigator.pushNamed(
+                                                context, 'blockchain');
+                                          },
                                         ),
                                       ),
                                       Container(
@@ -449,7 +469,10 @@ class _AppDrawerState extends State<AppDrawer> {
                                               color: Colors.black,
                                             ),
                                           ),
-                                          onTap: () {},
+                                          onTap: () {
+                                            Navigator.pushNamed(
+                                                context, 'nodejs_mongo');
+                                          },
                                         ),
                                       ),
                                     ],
