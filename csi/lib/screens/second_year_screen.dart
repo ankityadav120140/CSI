@@ -1,5 +1,3 @@
-// ignore_for_file: use_key_in_widget_constructors, unnecessary_new, prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 
 import 'package:hexcolor/hexcolor.dart';
@@ -169,6 +167,9 @@ class SecondYearScreen extends StatelessWidget {
                               (indData) => Individual(
                                 indData.name,
                                 indData.imageUrl,
+                                indData.facebookUrl,
+                                indData.githubUrl,
+                                indData.linkedinUrl,
                               ),
                             )
                             .toList(),

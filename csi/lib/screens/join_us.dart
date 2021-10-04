@@ -1,38 +1,132 @@
+import 'package:csi/widgets/app_drawer.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hexcolor/hexcolor.dart';
 
-import '../widgets/app_drawer.dart';
-import '../widgets/individual.dart';
-import '../widgets/third_year_data.dart';
-
-class ThirdYearScreen extends StatelessWidget {
+class JoinUs extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
+  Widget _cards(String title1, String title2,String para) {
+    return Container(
+      height: 150,
+      width:double.infinity,
+      decoration: BoxDecoration(
+        color: HexColor('#E7F3FF'),
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 10,
+            // spreadRadius: 5,
+            offset: Offset(
+              8,
+              8,
+            ),
+          ),
+        ],
+      ),
+      margin: EdgeInsets.only(
+        top: 60,
+        left: 10,
+        right: 10,
+      ),
+      padding: EdgeInsets.only(
+        top: 17,
+        left: 23,
+        right: 5,
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+
+        children: <Widget>[
+          Container(
+            height: 100,
+            width: 50,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(topRight: Radius.circular(300),bottomRight: Radius.circular(300)),
+              gradient: LinearGradient(
+                colors: [HexColor('#79B6FC'), Colors.white],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                stops: [0.3, 1.8],
+              ),
+
+            ),
+            child: Text(title2,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 35,
+            ),),
+          ),
+          Container(
+            height: 145,
+            width: 190,
+            margin: EdgeInsets.only(left: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  child: Text(
+                    title1,
+                    style: GoogleFonts.poppins(
+                        color: Colors.black,
+                        fontSize: 28,
+                        height: 1,
+                        fontWeight: FontWeight.w400),
+                    // style: TextStyle(
+                    //   color: Colors.black,
+                    //   fontSize: 35,
+                    //   fontFamily: 'PlayfairDisplay',
+                    //   fontWeight: FontWeight.w500,
+
+                    // ),
+                  ),
+                ),
+
+                Container(
+                  margin: EdgeInsets.only(top: 18),
+
+                  child: Text(para,
+                      style: TextStyle(
+                        color: Colors.black.withOpacity(0.6),
+                        fontSize: 13,
+                        letterSpacing: 1.6,
+                        height: 1.4,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w400,
+                      )),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
 
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
-
-    // static String routeName = '/'
     return Scaffold(
       backgroundColor: HexColor('#E7F3FF'),
       key: _scaffoldKey,
       drawer: AppDrawer(),
       body: SafeArea(
-        child: Column(
-          children: <Widget>[
-            Flexible(
-              fit: FlexFit.loose,
-              flex: 0,
-              child: Container(
-                margin: EdgeInsets.only(left: 10),
+        child:SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(left: 10.0),
                 width: double.infinity,
-                // height: mediaQuery.size.height * 0.3,
+                //height: mediaQuery.size.height * 0.28,
                 decoration: BoxDecoration(
-                  color: HexColor('#E7F3FF'),
+                  color:  HexColor('#E7F3FF'),
                   image: DecorationImage(
-                    image: AssetImage('assets/images/our team bg.png'),
+                    image: AssetImage('assets/images/our feature page bg.png'),
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -49,13 +143,12 @@ class ThirdYearScreen extends StatelessWidget {
                           width: 18,
                           // color: Colors.black,
                         ),
-                        onPressed: () =>
-                            _scaffoldKey.currentState!.openDrawer(),
+                        onPressed: () => _scaffoldKey.currentState!.openDrawer(),
                       ),
                     ),
                     Container(
-                      // height: 150,
-                      padding: EdgeInsets.only(top: 30),
+                      height: 130,
+                      padding: EdgeInsets.only(top: 10),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
@@ -67,13 +160,14 @@ class ThirdYearScreen extends StatelessWidget {
                             ),
 
                             child: Text(
-                              'Our',
+                              'Join',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontFamily: 'Poppins',
                                 fontWeight: FontWeight.w400,
                                 fontSize: 45,
                                 letterSpacing: 2,
+
                               ),
                             ),
                           ),
@@ -84,7 +178,7 @@ class ThirdYearScreen extends StatelessWidget {
                             ),
 
                             child: Text(
-                              'Team',
+                              'Us',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontFamily: 'Poppins',
@@ -95,19 +189,18 @@ class ThirdYearScreen extends StatelessWidget {
                               ),
                             ),
                           )
+
                         ],
                       ),
                     ),
+
                   ],
                 ),
               ),
-            ),
-            Expanded(
-              child: Container(
-                height: mediaQuery.size.height * 0.7,
+              Container(
                 padding: EdgeInsets.only(
                   top: mediaQuery.size.height * 0.05,
-                  // bottom: mediaQuery.size.height * 0.069,
+                  bottom: mediaQuery.size.height * 0.069,
                 ),
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -121,17 +214,17 @@ class ThirdYearScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.only(bottom: 20),
                       child: ClipRRect(
                         borderRadius: BorderRadius.only(
                           topRight: Radius.circular(32),
                           bottomRight: Radius.circular(32),
                         ),
                         child: Container(
-                          padding: EdgeInsets.only(left: 13),
+                          padding: EdgeInsets.only(left: 20),
                           alignment: Alignment.centerLeft,
                           height: 50,
-                          width: 140,
+                          width: 120,
+                          // color: HexColor('#79B6FC'),
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
                               colors: [HexColor('#79B6FC'), Colors.white],
@@ -141,7 +234,7 @@ class ThirdYearScreen extends StatelessWidget {
                             ),
                           ),
                           child: Text(
-                            'Third Year',
+                            'Join',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 16,
@@ -151,37 +244,29 @@ class ThirdYearScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Flexible(
-                      fit: FlexFit.loose,
-                      // padding: EdgeInsets.only(top: 30, bottom: 0),
-                      child: GridView(
-                        padding: EdgeInsets.all(10),
-                        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                          maxCrossAxisExtent: 300,
-                          crossAxisSpacing: 30,
-                          mainAxisSpacing: 30,
-                          childAspectRatio: 156 / 190,
-                        ),
-                        children: thirdYearData
-                            .map(
-                              (indData) => Individual(
-                                indData.name,
-                                indData.imageUrl,
-                                indData.facebookUrl,
-                                indData.githubUrl,
-                                indData.linkedinUrl,
-                              ),
-                            )
-                            .toList(),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.vertical,
+                      child: Column(
+
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          _cards('Register','1',
+                              'Register for and participate in the annual CSI Induction for New  Entants : CINE'),
+                          _cards('Test','2',
+                              'Show us your potential by giving a simple test!'),
+                          _cards('Interview','3',
+                              'Prove your worth in the mano-a-mano interview round.'),
+                        ],
                       ),
                     )
                   ],
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
   }
 }
+
