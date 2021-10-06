@@ -1,26 +1,39 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_unnecessary_containers, use_key_in_widget_constructors
-
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 
 class Individual extends StatelessWidget {
   final String name;
-  // final String githubUrl;
-  // final String linkedinUrl;
-  // final String facebookUrl;
+  final String githubUrl;
+  final String linkedinUrl;
+  final String facebookUrl;
   final String imageUrl;
 
   const Individual(
     this.name,
-    // @required this.githubUrl,
-    // @required this.linkedinUrl,
-    // @required this.facebookUrl,
+
     this.imageUrl,
+      this.facebookUrl,
+      this.githubUrl,
+      this.linkedinUrl,
   );
+
 
   @override
   Widget build(BuildContext context) {
+
+
+     void _launchURLF() async =>
+    await canLaunch(facebookUrl) ? await launch(facebookUrl) : throw 'Could not launch $facebookUrl';
+
+     void _launchURLG() async =>
+         await canLaunch(githubUrl) ? await launch(githubUrl) : throw 'Could not launch $githubUrl';
+
+     void _launchURLL() async =>
+         await canLaunch(linkedinUrl) ? await launch(linkedinUrl) : throw 'Could not launch $linkedinUrl';
+
     return InkWell(
         child: Stack(
       children: <Widget>[
@@ -78,7 +91,7 @@ class Individual extends StatelessWidget {
                     ),
                     icon: SvgPicture.asset('assets/icons/facebook.svg',
                         color: Colors.white),
-                    onPressed: () {},
+                    onPressed: _launchURLF,
                   ),
                   IconButton(
                     iconSize: 18,
@@ -88,7 +101,7 @@ class Individual extends StatelessWidget {
                     ),
                     icon: SvgPicture.asset('assets/icons/github-image.svg',
                         color: Colors.white),
-                    onPressed: () {},
+                    onPressed: _launchURLG,
                   ),
                   IconButton(
                     iconSize: 18,
@@ -98,7 +111,7 @@ class Individual extends StatelessWidget {
                     ),
                     icon: SvgPicture.asset('assets/icons/linkedin.svg',
                         color: Colors.white),
-                    onPressed: () {},
+                    onPressed: _launchURLL,
                   ),
                 ],
               ),
@@ -108,4 +121,8 @@ class Individual extends StatelessWidget {
       ],
     ));
   }
+
+
 }
+
+

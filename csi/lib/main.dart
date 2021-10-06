@@ -5,8 +5,11 @@ import 'package:csi/screens/blockchain.dart';
 import 'package:csi/screens/cine.dart';
 import 'package:csi/screens/ethical_hacking.dart';
 import 'package:csi/screens/java_and_android.dart';
+import 'package:csi/screens/join_us.dart';
 import 'package:csi/screens/nodejs_with_mongo.dart';
+import 'package:csi/screens/onboarding_page.dart';
 import 'package:csi/screens/rdm.dart';
+import 'package:csi/screens/service_domain_screen.dart';
 import 'package:csi/screens/the_initiative.dart';
 import 'package:csi/screens/ui_with_mongo.dart';
 import 'package:csi/screens/vacanza.dart';
@@ -35,7 +38,7 @@ class MyApp extends StatelessWidget {
       home: ContactUs(),
       initialRoute: 'home',
       routes: {
-        'home': (context) => HomeScreen(),
+        'home': (context) => OnBoardingPage(),
         'our_features': (context) => OurFeaturesScreen(),
         'second_year': (context) => SecondYearScreen(),
         'third_year': (context) => ThirdYearScreen(),
@@ -52,6 +55,8 @@ class MyApp extends StatelessWidget {
         'web_tech_with_ang': (context) => const web_tech_with_ang(),
         'blockchain': (context) => const blockchain(),
         'nodejs_mongo': (context) => const nodejs_with_mongo(),
+        'service_domain':(context) => ServiceDomain(),
+        'join_us':(context) =>JoinUs(),
       },
     );
   }

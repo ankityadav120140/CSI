@@ -1,9 +1,11 @@
 // ignore_for_file: sized_box_for_whitespace, prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, avoid_unnecessary_containers
 
 import 'package:csi/screens/contact_us_screen.dart';
+import 'package:csi/screens/service_domain_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter/services.dart';
 
 const _url = 'https://csiakgec.in/index';
 
@@ -96,12 +98,9 @@ class _AppDrawerState extends State<AppDrawer> {
                           ),
                         ),
                         onTap: () {
-                          // Navigator.of(context).pushReplacementNamed(Screen.routeName);
+                          Navigator.pushNamed(context, 'service_domain');
                         },
-                        trailing: Icon(
-                          Icons.keyboard_arrow_down,
-                          color: HexColor('#2D2871'),
-                        ),
+
                       ),
                       ListTile(
                         //what we do
@@ -600,7 +599,7 @@ class _AppDrawerState extends State<AppDrawer> {
                           ),
                         ),
                         onTap: () {
-                          // Navigator.of(context).pushReplacementNamed(Screen.routeName);
+                          Navigator.pushNamed(context, 'join_us');
                         },
                       ),
                       ListTile(
