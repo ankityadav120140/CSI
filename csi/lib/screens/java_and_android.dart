@@ -35,7 +35,7 @@ class _java_and_androidState extends State<java_and_android> {
                 color: HexColor('#E7F3FF'),
                 image: DecorationImage(
                   image: AssetImage('assets/images/workshop.png'),
-                  fit: BoxFit.fitHeight,
+                  fit: BoxFit.fill,
                 ),
               ),
               child: Column(
@@ -56,7 +56,7 @@ class _java_and_androidState extends State<java_and_android> {
                   ),
                   Container(
                     // color: Colors.blue,
-                    height: 150,
+                    height: 250,
                     margin: EdgeInsets.only(
                       left: mediaQuery.size.height * 0.02,
                     ),
@@ -181,7 +181,7 @@ class _java_and_androidState extends State<java_and_android> {
                               borderRadius: BorderRadius.circular(32),
                             ),
                             elevation: 5,
-                            color: HexColor('#3bd482'),
+                            color: HexColor('#79B6FC'),
                             onPressed: () {},
                           )
                         : RaisedButton(
@@ -203,7 +203,7 @@ class _java_and_androidState extends State<java_and_android> {
                               borderRadius: BorderRadius.circular(32),
                             ),
                             elevation: 5,
-                            color: HexColor('#db694f'),
+                            color: HexColor('#79B6FC'),
                             onPressed: () {},
                           ),
                   ),

@@ -1,5 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors, unused_import
 
+import 'package:csi/screens/Login_registration.dart';
 import 'package:csi/screens/about_us.dart';
 import 'package:csi/screens/blockchain.dart';
 import 'package:csi/screens/cine.dart';
@@ -59,6 +60,7 @@ class MyApp extends StatelessWidget {
         'service_domain': (context) => ServiceDomain(),
         'join_us': (context) => JoinUs(),
         'our_alumni': (context) => const our_alumni(),
+        'register': (context) => RegistrationScreen(),
       },
     );
   }
