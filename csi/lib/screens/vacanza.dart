@@ -58,7 +58,7 @@ class _vacanzaState extends State<vacanza> {
                   ),
                   Container(
                     // color: Colors.blue,
-                    height: 150,
+                    height: 250,
                     margin: EdgeInsets.only(
                       left: mediaQuery.size.height * 0.02,
                     ),
@@ -182,7 +182,7 @@ class _vacanzaState extends State<vacanza> {
                               borderRadius: BorderRadius.circular(32),
                             ),
                             elevation: 5,
-                            color: HexColor('#3bd482'),
+                            color: HexColor('#79B6FC'),
                             onPressed: () {},
                           )
                         : RaisedButton(
@@ -204,7 +204,7 @@ class _vacanzaState extends State<vacanza> {
                               borderRadius: BorderRadius.circular(32),
                             ),
                             elevation: 5,
-                            color: HexColor('#db694f'),
+                            color: HexColor('#79B6FC'),
                             onPressed: () {},
                           ),
                   ),

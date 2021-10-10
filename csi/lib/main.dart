@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors
+// ignore_for_file: use_key_in_widget_constructors, unused_import
 
 import 'package:csi/screens/about_us.dart';
 import 'package:csi/screens/blockchain.dart';
@@ -8,6 +8,7 @@ import 'package:csi/screens/java_and_android.dart';
 import 'package:csi/screens/join_us.dart';
 import 'package:csi/screens/nodejs_with_mongo.dart';
 import 'package:csi/screens/onboarding_page.dart';
+import 'package:csi/screens/our_alumni.dart';
 import 'package:csi/screens/rdm.dart';
 import 'package:csi/screens/service_domain_screen.dart';
 import 'package:csi/screens/the_initiative.dart';
@@ -55,8 +56,9 @@ class MyApp extends StatelessWidget {
         'web_tech_with_ang': (context) => const web_tech_with_ang(),
         'blockchain': (context) => const blockchain(),
         'nodejs_mongo': (context) => const nodejs_with_mongo(),
-        'service_domain':(context) => ServiceDomain(),
-        'join_us':(context) =>JoinUs(),
+        'service_domain': (context) => ServiceDomain(),
+        'join_us': (context) => JoinUs(),
+        'our_alumni': (context) => const our_alumni(),
       },
     );
   }

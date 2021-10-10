@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, unnecessary_new, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables
+
 import 'package:csi/widgets/app_drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -5,13 +7,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class  ServiceDomain extends StatelessWidget {
+class ServiceDomain extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   Widget _cards(String title1, String para) {
     return Container(
-
-
       decoration: BoxDecoration(
         color: HexColor('#E7F3FF'),
         borderRadius: BorderRadius.circular(40),
@@ -29,9 +29,9 @@ class  ServiceDomain extends StatelessWidget {
       ),
       margin: EdgeInsets.only(
         top: 50,
-        left: 2,
+        left: 18,
+        right: 18,
         bottom: 10,
-
       ),
       padding: EdgeInsets.only(
         top: 27,
@@ -45,14 +45,12 @@ class  ServiceDomain extends StatelessWidget {
               child: Container(
                 width: 130,
                 height: 250,
-                margin: EdgeInsets.only(right: 10,bottom: 10),
-
+                margin: EdgeInsets.only(right: 10, bottom: 10),
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('assets/images/our feature page bg.png'),
                     fit: BoxFit.fitHeight,
                   ),
-
                 ),
               ),
             ),
@@ -60,12 +58,12 @@ class  ServiceDomain extends StatelessWidget {
               child: Container(
                 height: 275,
                 width: 185,
-                margin: EdgeInsets.only(left: 10,right: 10),
+                margin: EdgeInsets.only(left: 10, right: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Container(
-                      margin:EdgeInsets.only(bottom: 10),
+                      margin: EdgeInsets.only(bottom: 10),
                       child: Text(
                         title1,
                         style: GoogleFonts.poppins(
@@ -82,7 +80,6 @@ class  ServiceDomain extends StatelessWidget {
                         // ),
                       ),
                     ),
-
                     Container(
                       margin: EdgeInsets.only(top: 26),
                       child: Text(para,
@@ -108,7 +105,6 @@ class  ServiceDomain extends StatelessWidget {
   Widget _cardsr(String title1, String para) {
     return Container(
       height: 275,
-      
       decoration: BoxDecoration(
         color: HexColor('#E7F3FF'),
         borderRadius: BorderRadius.circular(40),
@@ -126,9 +122,9 @@ class  ServiceDomain extends StatelessWidget {
       ),
       margin: EdgeInsets.only(
         top: 50,
-        left: 2,
+        left: 18,
+        right: 18,
         bottom: 10,
-
       ),
       padding: EdgeInsets.only(
         top: 27,
@@ -138,17 +134,16 @@ class  ServiceDomain extends StatelessWidget {
       child: Expanded(
         child: Row(
           children: <Widget>[
-
             Expanded(
               child: Container(
                 height: 275,
                 width: 185,
-                margin: EdgeInsets.only(left: 10,right: 10),
+                margin: EdgeInsets.only(left: 10, right: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Container(
-                      margin:EdgeInsets.only(bottom: 10),
+                      margin: EdgeInsets.only(bottom: 10),
                       child: Text(
                         title1,
                         style: GoogleFonts.poppins(
@@ -165,8 +160,6 @@ class  ServiceDomain extends StatelessWidget {
                         // ),
                       ),
                     ),
-
-
                     Container(
                       margin: EdgeInsets.only(top: 26),
                       child: Text(para,
@@ -179,7 +172,6 @@ class  ServiceDomain extends StatelessWidget {
                             fontWeight: FontWeight.w400,
                           )),
                     ),
-
                   ],
                 ),
               ),
@@ -188,14 +180,12 @@ class  ServiceDomain extends StatelessWidget {
               child: Container(
                 width: 130,
                 height: 250,
-                margin: EdgeInsets.only(right: 10,bottom: 10),
-
+                margin: EdgeInsets.only(right: 10, bottom: 10),
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('assets/images/our feature page bg.png'),
                     fit: BoxFit.fitHeight,
                   ),
-
                 ),
               ),
             ),
@@ -213,155 +203,152 @@ class  ServiceDomain extends StatelessWidget {
       key: _scaffoldKey,
       drawer: AppDrawer(),
       body: SafeArea(
-          child:SingleChildScrollView(
-            child: Column(
-              children: <Widget>[
-                Container(
-                  margin: EdgeInsets.only(left: 10.0),
-                  width: double.infinity,
-                  //height: mediaQuery.size.height * 0.28,
-                  decoration: BoxDecoration(
-                    color:  HexColor('#E7F3FF'),
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/our feature page bg.png'),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Container(
-                        margin: EdgeInsets.only(top: 10),
-                        child: IconButton(
-                          icon: SvgPicture.asset(
-                            'assets/icons/menu.svg',
-                            height: 18,
-                            width: 18,
-                            // color: Colors.black,
-                          ),
-                          onPressed: () => _scaffoldKey.currentState!.openDrawer(),
-                        ),
-                      ),
-                      Container(
-                        height: 130,
-                        padding: EdgeInsets.only(top: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Container(
-                              // color: Colors.red,
-
-                              margin: EdgeInsets.only(
-                                left: mediaQuery.size.height * 0.02,
-                              ),
-
-                              child: Text(
-                                'Service',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontFamily: 'Poppins',
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 45,
-                                  letterSpacing: 2,
-
-                                ),
-                              ),
-                            ),
-                            Container(
-                              // color: Colors.blue,
-                              margin: EdgeInsets.only(
-                                left: mediaQuery.size.height * 0.02,
-                              ),
-
-                              child: Text(
-                                'Domains',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontFamily: 'Poppins',
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 45,
-                                  height: 1,
-                                  letterSpacing: 2,
-                                ),
-                              ),
-                            )
-
-                          ],
-                        ),
-                      ),
-
-                    ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(left: 10.0),
+                width: double.infinity,
+                //height: mediaQuery.size.height * 0.28,
+                decoration: BoxDecoration(
+                  color: HexColor('#E7F3FF'),
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/our feature page bg.png'),
+                    fit: BoxFit.fill,
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.only(
-                    top: mediaQuery.size.height * 0.05,
-                    bottom: mediaQuery.size.height * 0.069,
-                  ),
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(32),
-                      topRight: Radius.circular(32),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(top: 10),
+                      child: IconButton(
+                        icon: SvgPicture.asset(
+                          'assets/icons/menu.svg',
+                          height: 18,
+                          width: 18,
+                          // color: Colors.black,
+                        ),
+                        onPressed: () =>
+                            _scaffoldKey.currentState!.openDrawer(),
+                      ),
                     ),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Container(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(32),
-                            bottomRight: Radius.circular(32),
-                          ),
-                          child: Container(
-                            padding: EdgeInsets.only(left: 20),
-                            alignment: Alignment.centerLeft,
-                            height: 50,
-                            width: 120,
-                            // color: HexColor('#79B6FC'),
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                colors: [HexColor('#79B6FC'), Colors.white],
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                                stops: [0.5, 1.8],
-                              ),
+                    Container(
+                      height: 130,
+                      padding: EdgeInsets.only(top: 10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Container(
+                            // color: Colors.red,
+
+                            margin: EdgeInsets.only(
+                              left: mediaQuery.size.height * 0.02,
                             ),
+
                             child: Text(
-                              'Services',
+                              'Service',
                               style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontFamily: 'Poppins',
-                                  fontWeight: FontWeight.w500),
+                                color: Colors.black,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w400,
+                                fontSize: 45,
+                                letterSpacing: 2,
+                              ),
                             ),
+                          ),
+                          Container(
+                            // color: Colors.blue,
+                            margin: EdgeInsets.only(
+                              left: mediaQuery.size.height * 0.02,
+                            ),
+
+                            child: Text(
+                              'Domains',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w600,
+                                fontSize: 45,
+                                height: 1,
+                                letterSpacing: 2,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.only(
+                  top: mediaQuery.size.height * 0.05,
+                  bottom: mediaQuery.size.height * 0.069,
+                ),
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(32),
+                    topRight: Radius.circular(32),
+                  ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Container(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(32),
+                          bottomRight: Radius.circular(32),
+                        ),
+                        child: Container(
+                          padding: EdgeInsets.only(left: 20),
+                          alignment: Alignment.centerLeft,
+                          height: 50,
+                          width: 180,
+                          // color: HexColor('#79B6FC'),
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [HexColor('#79B6FC'), Colors.white],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              stops: [0.5, 1.8],
+                            ),
+                          ),
+                          child: Text(
+                            'Services Domains',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500),
                           ),
                         ),
                       ),
-                      SingleChildScrollView(
-                        scrollDirection: Axis.vertical,
-                        child: Column(
-
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            _cards('Web-D',
-                                'We  and we create those platforms to put out their innovative ideas and beliefs, to create a better world.'),
-                            _cardsr('Android-D',
-                                'We at ing which enables others to  ideas and beliefs, to create a better world.'),
-                            _cards('Designing',
-                                'We at st, , to create a better world.'),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.vertical,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          _cards('Web-D',
+                              'We  and we create those platforms to put out their innovative ideas and beliefs, to create a better world.'),
+                          _cardsr('Android-D',
+                              'We at ing which enables others to  ideas and beliefs, to create a better world.'),
+                          _cards('Designing',
+                              'We at st, , to create a better world.'),
+                        ],
+                      ),
+                    )
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
+        ),
       ),
     );
   }

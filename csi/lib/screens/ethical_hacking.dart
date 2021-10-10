@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types, unnecessary_new, deprecated_member_use, prefer_const_constructors
+// ignore_for_file: camel_case_types, unnecessary_new, deprecated_member_use, prefer_const_constructors, dead_code
 
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -17,7 +17,7 @@ class _ethical_hackingState extends State<ethical_hacking> {
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
-    bool reg = false;
+    bool reg = true;
     return Scaffold(
       backgroundColor: HexColor('#E7F3FF'),
       key: _scaffoldKey,
@@ -35,7 +35,7 @@ class _ethical_hackingState extends State<ethical_hacking> {
                 color: HexColor('#E7F3FF'),
                 image: DecorationImage(
                   image: AssetImage('assets/images/workshop.png'),
-                  fit: BoxFit.fitHeight,
+                  fit: BoxFit.fill,
                 ),
               ),
               child: Column(
@@ -56,7 +56,7 @@ class _ethical_hackingState extends State<ethical_hacking> {
                   ),
                   Container(
                     // color: Colors.blue,
-                    height: 150,
+                    height: 250,
                     margin: EdgeInsets.only(
                       left: mediaQuery.size.height * 0.02,
                     ),
@@ -81,8 +81,8 @@ class _ethical_hackingState extends State<ethical_hacking> {
             ),
             Container(
               padding: EdgeInsets.only(
-                top: mediaQuery.size.height * 0.05,
-                bottom: mediaQuery.size.height * 0.09,
+                // top: mediaQuery.size.height * 0.05,
+                bottom: mediaQuery.size.height * 0.15,
               ),
               width: double.infinity,
               decoration: BoxDecoration(
@@ -161,7 +161,6 @@ class _ethical_hackingState extends State<ethical_hacking> {
                       top: mediaQuery.size.height * 0.10,
                     ),
                     child: reg
-                        // ignore: dead_code
                         ? RaisedButton(
                             child: Padding(
                               padding: const EdgeInsets.symmetric(
@@ -181,7 +180,7 @@ class _ethical_hackingState extends State<ethical_hacking> {
                               borderRadius: BorderRadius.circular(32),
                             ),
                             elevation: 5,
-                            color: HexColor('#3bd482'),
+                            color: HexColor('#79B6FC'),
                             onPressed: () {},
                           )
                         : RaisedButton(
@@ -203,7 +202,7 @@ class _ethical_hackingState extends State<ethical_hacking> {
                               borderRadius: BorderRadius.circular(32),
                             ),
                             elevation: 5,
-                            color: HexColor('#db694f'),
+                            color: HexColor('#79B6FC'),
                             onPressed: () {},
                           ),
                   ),

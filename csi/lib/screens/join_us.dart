@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors, unnecessary_new, prefer_const_constructors, prefer_const_literals_to_create_immutables, duplicate_ignore, avoid_unnecessary_containers
+
 import 'package:csi/widgets/app_drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,13 +10,14 @@ import 'package:hexcolor/hexcolor.dart';
 class JoinUs extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
-  Widget _cards(String title1, String title2,String para) {
+  Widget _cards(String title1, String title2, String para) {
     return Container(
       height: 150,
-      width:double.infinity,
+      width: double.infinity,
       decoration: BoxDecoration(
         color: HexColor('#E7F3FF'),
         borderRadius: BorderRadius.circular(20),
+        // ignore: prefer_const_literals_to_create_immutables
         boxShadow: [
           BoxShadow(
             color: Colors.black12,
@@ -39,27 +42,29 @@ class JoinUs extends StatelessWidget {
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
-
         children: <Widget>[
           Container(
             height: 100,
             width: 50,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(topRight: Radius.circular(300),bottomRight: Radius.circular(300)),
+              borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(300),
+                  bottomRight: Radius.circular(300)),
               gradient: LinearGradient(
                 colors: [HexColor('#79B6FC'), Colors.white],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
                 stops: [0.3, 1.8],
               ),
-
             ),
-            child: Text(title2,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 35,
-            ),),
+            child: Text(
+              title2,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 35,
+              ),
+            ),
           ),
           Container(
             height: 145,
@@ -85,10 +90,8 @@ class JoinUs extends StatelessWidget {
                     // ),
                   ),
                 ),
-
                 Container(
                   margin: EdgeInsets.only(top: 18),
-
                   child: Text(para,
                       style: TextStyle(
                         color: Colors.black.withOpacity(0.6),
@@ -107,7 +110,6 @@ class JoinUs extends StatelessWidget {
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
@@ -116,7 +118,7 @@ class JoinUs extends StatelessWidget {
       key: _scaffoldKey,
       drawer: AppDrawer(),
       body: SafeArea(
-        child:SingleChildScrollView(
+        child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
               Container(
@@ -124,7 +126,7 @@ class JoinUs extends StatelessWidget {
                 width: double.infinity,
                 //height: mediaQuery.size.height * 0.28,
                 decoration: BoxDecoration(
-                  color:  HexColor('#E7F3FF'),
+                  color: HexColor('#E7F3FF'),
                   image: DecorationImage(
                     image: AssetImage('assets/images/our feature page bg.png'),
                     fit: BoxFit.contain,
@@ -143,7 +145,8 @@ class JoinUs extends StatelessWidget {
                           width: 18,
                           // color: Colors.black,
                         ),
-                        onPressed: () => _scaffoldKey.currentState!.openDrawer(),
+                        onPressed: () =>
+                            _scaffoldKey.currentState!.openDrawer(),
                       ),
                     ),
                     Container(
@@ -167,7 +170,6 @@ class JoinUs extends StatelessWidget {
                                 fontWeight: FontWeight.w400,
                                 fontSize: 45,
                                 letterSpacing: 2,
-
                               ),
                             ),
                           ),
@@ -189,11 +191,9 @@ class JoinUs extends StatelessWidget {
                               ),
                             ),
                           )
-
                         ],
                       ),
                     ),
-
                   ],
                 ),
               ),
@@ -247,14 +247,13 @@ class JoinUs extends StatelessWidget {
                     SingleChildScrollView(
                       scrollDirection: Axis.vertical,
                       child: Column(
-
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
-                          _cards('Register','1',
+                          _cards('Register', '1',
                               'Register for and participate in the annual CSI Induction for New  Entants : CINE'),
-                          _cards('Test','2',
+                          _cards('Test', '2',
                               'Show us your potential by giving a simple test!'),
-                          _cards('Interview','3',
+                          _cards('Interview', '3',
                               'Prove your worth in the mano-a-mano interview round.'),
                         ],
                       ),
@@ -269,4 +268,3 @@ class JoinUs extends StatelessWidget {
     );
   }
 }
-

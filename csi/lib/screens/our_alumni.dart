@@ -1,22 +1,24 @@
-// ignore_for_file: use_key_in_widget_constructors, unnecessary_new, prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, camel_case_types, unnecessary_new, prefer_const_literals_to_create_immutables
 
+import 'package:csi/widgets/app_drawer.dart';
+import 'package:csi/widgets/individual.dart';
+import 'package:csi/widgets/second_year_data.dart';
 import 'package:flutter/material.dart';
-
-import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hexcolor/hexcolor.dart';
 
-import '../widgets/app_drawer.dart';
-import '../widgets/individual.dart';
-import '../widgets/third_year_data.dart';
+class our_alumni extends StatefulWidget {
+  const our_alumni({Key? key}) : super(key: key);
 
-class ThirdYearScreen extends StatelessWidget {
+  @override
+  _our_alumniState createState() => _our_alumniState();
+}
+
+class _our_alumniState extends State<our_alumni> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
-
-    // static String routeName = '/'
     return Scaffold(
       backgroundColor: HexColor('#E7F3FF'),
       key: _scaffoldKey,
@@ -86,7 +88,7 @@ class ThirdYearScreen extends StatelessWidget {
                             ),
 
                             child: Text(
-                              'Team',
+                              'Alumni',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontFamily: 'Poppins',
@@ -143,7 +145,7 @@ class ThirdYearScreen extends StatelessWidget {
                             ),
                           ),
                           child: Text(
-                            'Third Year',
+                            'OUR ALUMNI',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 16,
@@ -164,7 +166,7 @@ class ThirdYearScreen extends StatelessWidget {
                           mainAxisSpacing: 30,
                           childAspectRatio: 156 / 190,
                         ),
-                        children: thirdYearData
+                        children: secondYearData
                             .map(
                               (indData) => Individual(
                                 indData.name,

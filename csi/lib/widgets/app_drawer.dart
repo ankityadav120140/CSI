@@ -1,4 +1,4 @@
-// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, avoid_unnecessary_containers
+// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, avoid_unnecessary_containers, unused_import
 
 import 'package:csi/screens/contact_us_screen.dart';
 import 'package:csi/screens/service_domain_screen.dart';
@@ -59,6 +59,7 @@ class _AppDrawerState extends State<AppDrawer> {
                         title: Text(
                           'Home',
                           style: TextStyle(
+                            fontWeight: FontWeight.bold,
                             fontSize: 16,
                             color: Colors.black,
                           ),
@@ -78,6 +79,7 @@ class _AppDrawerState extends State<AppDrawer> {
                           style: TextStyle(
                             fontSize: 16,
                             color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                         onTap: () {
@@ -95,12 +97,12 @@ class _AppDrawerState extends State<AppDrawer> {
                           style: TextStyle(
                             fontSize: 16,
                             color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                         onTap: () {
                           Navigator.pushNamed(context, 'service_domain');
                         },
-
                       ),
                       ListTile(
                         //what we do
@@ -113,6 +115,7 @@ class _AppDrawerState extends State<AppDrawer> {
                           style: TextStyle(
                             fontSize: 16,
                             color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                         trailing: wwd
@@ -138,28 +141,29 @@ class _AppDrawerState extends State<AppDrawer> {
                         Container(
                           // margin: const EdgeInsets.only(left: 50),
                           decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [Colors.white, Colors.white10],
-                              // begin: Alignment.bottomLeft,
-                              // end: Alignment.topRight,
-                              stops: [0.1, 0.9],
-                            ),
+                            // gradient: LinearGradient(
+                            //   colors: [Colors.white, Colors.white10],
+                            //   // begin: Alignment.bottomLeft,
+                            //   // end: Alignment.topRight,
+                            //   stops: [0.1, 0.9],
+                            // ),
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                           ),
                           child: Column(
                             children: [
                               Container(
-                                margin: const EdgeInsets.only(left: 30),
+                                margin: const EdgeInsets.only(left: 83),
                                 child: ListTile(
-                                  leading: Icon(
-                                    Icons.verified_outlined,
-                                    color: HexColor('#2D2871'),
-                                  ),
+                                  // leading: Icon(
+                                  //   Icons.verified_outlined,
+                                  //   color: HexColor('#2D2871'),
+                                  // ),
                                   title: Text(
                                     "Events",
                                     style: TextStyle(
                                       fontSize: 16,
                                       color: Colors.black,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                   trailing: evDrop
@@ -186,24 +190,24 @@ class _AppDrawerState extends State<AppDrawer> {
                                 Container(
                                   margin: const EdgeInsets.only(left: 25),
                                   decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      colors: [Colors.white, Colors.white10],
-                                      // begin: Alignment.bottomLeft,
-                                      // end: Alignment.topRight,
-                                      stops: [0.1, 0.9],
-                                    ),
+                                    // gradient: LinearGradient(
+                                    //   colors: [Colors.white, Colors.white10],
+                                    //   // begin: Alignment.bottomLeft,
+                                    //   // end: Alignment.topRight,
+                                    //   stops: [0.1, 0.9],
+                                    // ),
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(10)),
                                   ),
                                   child: Column(
                                     children: [
                                       Container(
-                                        margin: const EdgeInsets.only(left: 30),
+                                        margin: const EdgeInsets.only(left: 83),
                                         child: ListTile(
-                                          leading: Icon(
-                                            Icons.verified_outlined,
-                                            color: HexColor('#2D2871'),
-                                          ),
+                                          // leading: Icon(
+                                          //   Icons.verified_outlined,
+                                          //   color: HexColor('#2D2871'),
+                                          // ),
                                           title: Text(
                                             "CINE",
                                             style: TextStyle(
@@ -220,12 +224,12 @@ class _AppDrawerState extends State<AppDrawer> {
                                         ),
                                       ),
                                       Container(
-                                        margin: const EdgeInsets.only(left: 30),
+                                        margin: const EdgeInsets.only(left: 83),
                                         child: ListTile(
-                                          leading: Icon(
-                                            Icons.verified_outlined,
-                                            color: HexColor('#2D2871'),
-                                          ),
+                                          // leading: Icon(
+                                          //   Icons.verified_outlined,
+                                          //   color: HexColor('#2D2871'),
+                                          // ),
                                           title: Text(
                                             "The Initiative",
                                             style: TextStyle(
@@ -242,12 +246,12 @@ class _AppDrawerState extends State<AppDrawer> {
                                         ),
                                       ),
                                       Container(
-                                        margin: const EdgeInsets.only(left: 30),
+                                        margin: const EdgeInsets.only(left: 83),
                                         child: ListTile(
-                                          leading: Icon(
-                                            Icons.verified_outlined,
-                                            color: HexColor('#2D2871'),
-                                          ),
+                                          // leading: Icon(
+                                          //   Icons.verified_outlined,
+                                          //   color: HexColor('#2D2871'),
+                                          // ),
                                           title: Text(
                                             "RDM",
                                             style: TextStyle(
@@ -261,12 +265,12 @@ class _AppDrawerState extends State<AppDrawer> {
                                         ),
                                       ),
                                       Container(
-                                        margin: const EdgeInsets.only(left: 30),
+                                        margin: const EdgeInsets.only(left: 83),
                                         child: ListTile(
-                                          leading: Icon(
-                                            Icons.verified_outlined,
-                                            color: HexColor('#2D2871'),
-                                          ),
+                                          // leading: Icon(
+                                          //   Icons.verified_outlined,
+                                          //   color: HexColor('#2D2871'),
+                                          // ),
                                           title: Text(
                                             "Vacanza",
                                             style: TextStyle(
@@ -284,15 +288,16 @@ class _AppDrawerState extends State<AppDrawer> {
                                   ),
                                 ),
                               Container(
-                                margin: const EdgeInsets.only(left: 30),
+                                margin: const EdgeInsets.only(left: 83),
                                 child: ListTile(
-                                  leading: Icon(
-                                    Icons.verified_outlined,
-                                    color: HexColor('#2D2871'),
-                                  ),
+                                  // leading: Icon(
+                                  //   Icons.verified_outlined,
+                                  //   color: HexColor('#2D2871'),
+                                  // ),
                                   title: Text(
                                     "Workshop",
                                     style: TextStyle(
+                                      fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                       color: Colors.black,
                                     ),
@@ -321,24 +326,24 @@ class _AppDrawerState extends State<AppDrawer> {
                                 Container(
                                   margin: const EdgeInsets.only(left: 25),
                                   decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      colors: [Colors.white, Colors.white10],
-                                      // begin: Alignment.bottomLeft,
-                                      // end: Alignment.topRight,
-                                      stops: [0.1, 0.9],
-                                    ),
+                                    // gradient: LinearGradient(
+                                    //   colors: [Colors.white, Colors.white10],
+                                    //   // begin: Alignment.bottomLeft,
+                                    //   // end: Alignment.topRight,
+                                    //   stops: [0.1, 0.9],
+                                    // ),
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(10)),
                                   ),
                                   child: Column(
                                     children: [
                                       Container(
-                                        margin: const EdgeInsets.only(left: 30),
+                                        margin: const EdgeInsets.only(left: 83),
                                         child: ListTile(
-                                          leading: Icon(
-                                            Icons.verified_outlined,
-                                            color: HexColor('#2D2871'),
-                                          ),
+                                          // leading: Icon(
+                                          //   Icons.verified_outlined,
+                                          //   color: HexColor('#2D2871'),
+                                          // ),
                                           title: Text(
                                             "UI With MongoDB",
                                             style: TextStyle(
@@ -355,12 +360,12 @@ class _AppDrawerState extends State<AppDrawer> {
                                         ),
                                       ),
                                       Container(
-                                        margin: const EdgeInsets.only(left: 30),
+                                        margin: const EdgeInsets.only(left: 83),
                                         child: ListTile(
-                                          leading: Icon(
-                                            Icons.verified_outlined,
-                                            color: HexColor('#2D2871'),
-                                          ),
+                                          // leading: Icon(
+                                          //   Icons.verified_outlined,
+                                          //   color: HexColor('#2D2871'),
+                                          // ),
                                           title: Text(
                                             "Java And Android",
                                             style: TextStyle(
@@ -375,12 +380,12 @@ class _AppDrawerState extends State<AppDrawer> {
                                         ),
                                       ),
                                       Container(
-                                        margin: const EdgeInsets.only(left: 30),
+                                        margin: const EdgeInsets.only(left: 83),
                                         child: ListTile(
-                                          leading: Icon(
-                                            Icons.verified_outlined,
-                                            color: HexColor('#2D2871'),
-                                          ),
+                                          // leading: Icon(
+                                          //   Icons.verified_outlined,
+                                          //   color: HexColor('#2D2871'),
+                                          // ),
                                           title: Text(
                                             "Ethical Hacking",
                                             style: TextStyle(
@@ -395,12 +400,12 @@ class _AppDrawerState extends State<AppDrawer> {
                                         ),
                                       ),
                                       Container(
-                                        margin: const EdgeInsets.only(left: 30),
+                                        margin: const EdgeInsets.only(left: 83),
                                         child: ListTile(
-                                          leading: Icon(
-                                            Icons.verified_outlined,
-                                            color: HexColor('#2D2871'),
-                                          ),
+                                          // leading: Icon(
+                                          //   Icons.verified_outlined,
+                                          //   color: HexColor('#2D2871'),
+                                          // ),
                                           title: Text(
                                             "Wev Development",
                                             style: TextStyle(
@@ -415,12 +420,12 @@ class _AppDrawerState extends State<AppDrawer> {
                                         ),
                                       ),
                                       Container(
-                                        margin: const EdgeInsets.only(left: 30),
+                                        margin: const EdgeInsets.only(left: 83),
                                         child: ListTile(
-                                          leading: Icon(
-                                            Icons.verified_outlined,
-                                            color: HexColor('#2D2871'),
-                                          ),
+                                          // leading: Icon(
+                                          //   Icons.verified_outlined,
+                                          //   color: HexColor('#2D2871'),
+                                          // ),
                                           title: Text(
                                             "Web Tech With Angular",
                                             style: TextStyle(
@@ -435,12 +440,12 @@ class _AppDrawerState extends State<AppDrawer> {
                                         ),
                                       ),
                                       Container(
-                                        margin: const EdgeInsets.only(left: 30),
+                                        margin: const EdgeInsets.only(left: 83),
                                         child: ListTile(
-                                          leading: Icon(
-                                            Icons.verified_outlined,
-                                            color: HexColor('#2D2871'),
-                                          ),
+                                          // leading: Icon(
+                                          //   Icons.verified_outlined,
+                                          //   color: HexColor('#2D2871'),
+                                          // ),
                                           title: Text(
                                             "Blockchain",
                                             style: TextStyle(
@@ -455,12 +460,12 @@ class _AppDrawerState extends State<AppDrawer> {
                                         ),
                                       ),
                                       Container(
-                                        margin: const EdgeInsets.only(left: 30),
+                                        margin: const EdgeInsets.only(left: 83),
                                         child: ListTile(
-                                          leading: Icon(
-                                            Icons.verified_outlined,
-                                            color: HexColor('#2D2871'),
-                                          ),
+                                          // leading: Icon(
+                                          //   Icons.verified_outlined,
+                                          //   color: HexColor('#2D2871'),
+                                          // ),
                                           title: Text(
                                             "Nodejs With MongoDB",
                                             style: TextStyle(
@@ -488,6 +493,7 @@ class _AppDrawerState extends State<AppDrawer> {
                         title: Text(
                           'Our Team',
                           style: TextStyle(
+                            fontWeight: FontWeight.bold,
                             fontSize: 16,
                             color: Colors.black,
                           ),
@@ -515,23 +521,23 @@ class _AppDrawerState extends State<AppDrawer> {
                         Container(
                           // margin: const EdgeInsets.only(left: 50),
                           decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [Colors.white, Colors.white10],
-                              // begin: Alignment.bottomLeft,
-                              // end: Alignment.topRight,
-                              stops: [0.1, 0.9],
-                            ),
+                            // gradient: LinearGradient(
+                            //   colors: [Colors.white, Colors.white10],
+                            //   // begin: Alignment.bottomLeft,
+                            //   // end: Alignment.topRight,
+                            //   stops: [0.1, 0.9],
+                            // ),
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                           ),
                           child: Column(
                             children: [
                               Container(
-                                margin: const EdgeInsets.only(left: 30),
+                                margin: const EdgeInsets.only(left: 83),
                                 child: ListTile(
-                                  leading: Icon(
-                                    Icons.verified_outlined,
-                                    color: HexColor('#2D2871'),
-                                  ),
+                                  // leading: Icon(
+                                  //   Icons.verified_outlined,
+                                  //   color: HexColor('#2D2871'),
+                                  // ),
                                   title: Text(
                                     "Second Year",
                                     style: TextStyle(
@@ -545,12 +551,12 @@ class _AppDrawerState extends State<AppDrawer> {
                                 ),
                               ),
                               Container(
-                                margin: const EdgeInsets.only(left: 30),
+                                margin: const EdgeInsets.only(left: 83),
                                 child: ListTile(
-                                  leading: Icon(
-                                    Icons.verified_outlined,
-                                    color: HexColor('#2D2871'),
-                                  ),
+                                  // leading: Icon(
+                                  //   Icons.verified_outlined,
+                                  //   color: HexColor('#2D2871'),
+                                  // ),
                                   title: Text(
                                     "Third Year",
                                     style: TextStyle(
@@ -564,12 +570,12 @@ class _AppDrawerState extends State<AppDrawer> {
                                 ),
                               ),
                               Container(
-                                margin: const EdgeInsets.only(left: 30),
+                                margin: const EdgeInsets.only(left: 83),
                                 child: ListTile(
-                                  leading: Icon(
-                                    Icons.verified_outlined,
-                                    color: HexColor('#2D2871'),
-                                  ),
+                                  // leading: Icon(
+                                  //   Icons.verified_outlined,
+                                  //   color: HexColor('#2D2871'),
+                                  // ),
                                   title: Text(
                                     "Fourth Year",
                                     style: TextStyle(
@@ -588,12 +594,31 @@ class _AppDrawerState extends State<AppDrawer> {
                       ListTile(
                         //join us
                         leading: Icon(
+                          Icons.group,
+                          color: HexColor('#2D2871'),
+                        ),
+                        title: Text(
+                          'Our Alumni',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                            color: Colors.black,
+                          ),
+                        ),
+                        onTap: () {
+                          Navigator.pushNamed(context, 'our_alumni');
+                        },
+                      ),
+                      ListTile(
+                        //join us
+                        leading: Icon(
                           Icons.queue,
                           color: HexColor('#2D2871'),
                         ),
                         title: Text(
                           'Join Us',
                           style: TextStyle(
+                            fontWeight: FontWeight.bold,
                             fontSize: 16,
                             color: Colors.black,
                           ),
@@ -611,6 +636,7 @@ class _AppDrawerState extends State<AppDrawer> {
                         title: Text(
                           'Contact Us',
                           style: TextStyle(
+                            fontWeight: FontWeight.bold,
                             fontSize: 16,
                             color: Colors.black,
                           ),
@@ -626,18 +652,37 @@ class _AppDrawerState extends State<AppDrawer> {
                       ListTile(
                         //about us
                         leading: Icon(
-                          Icons.info,
+                          Icons.domain_verification,
                           color: HexColor('#2D2871'),
                         ),
                         title: Text(
-                          'About Us',
+                          'Verify Certificate',
                           style: TextStyle(
+                            fontWeight: FontWeight.bold,
                             fontSize: 16,
                             color: Colors.black,
                           ),
                         ),
                         onTap: () {
                           // Navigator.of(context).pushReplacementNamed(Screen.routeName);
+                        },
+                      ),
+                      ListTile(
+                        //about us
+                        leading: Icon(
+                          Icons.info,
+                          color: HexColor('#2D2871'),
+                        ),
+                        title: Text(
+                          'About Us',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                            color: Colors.black,
+                          ),
+                        ),
+                        onTap: () {
+                          Navigator.pushNamed(context, 'about_us');
                         },
                       ),
                     ],
@@ -653,6 +698,7 @@ class _AppDrawerState extends State<AppDrawer> {
                     title: Text(
                       'Website',
                       style: TextStyle(
+                        fontWeight: FontWeight.bold,
                         fontSize: 16,
                         color: Colors.black,
                       ),

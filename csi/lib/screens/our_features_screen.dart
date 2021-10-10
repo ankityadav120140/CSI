@@ -12,10 +12,10 @@ import 'package:google_fonts/google_fonts.dart';
 class OurFeaturesScreen extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
-  Widget _cards(String title1, String title2, String para) {
+  Widget _cards(String title1, String para) {
     return Container(
-      height: 371,
-      width: 285,
+      height: 300,
+      width: double.infinity,
       decoration: BoxDecoration(
         color: HexColor('#E7F3FF'),
         borderRadius: BorderRadius.circular(20),
@@ -33,12 +33,13 @@ class OurFeaturesScreen extends StatelessWidget {
         ],
       ),
       margin: EdgeInsets.only(
-        top: 100,
-        left: 30,
+        top: 50,
+        left: 20,
         bottom: 50,
+        right: 20,
       ),
       padding: EdgeInsets.only(
-        top: 17,
+        top: 30,
         left: 23,
         right: 5,
       ),
@@ -46,6 +47,7 @@ class OurFeaturesScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
+            margin: EdgeInsets.only(top: 10),
             child: Text(
               title1,
               style: GoogleFonts.poppins(
@@ -60,15 +62,6 @@ class OurFeaturesScreen extends StatelessWidget {
               //   fontWeight: FontWeight.w500,
 
               // ),
-            ),
-          ),
-          Container(
-            child: Text(
-              title2,
-              style: GoogleFonts.poppins(
-                  color: Colors.black,
-                  fontSize: 35,
-                  fontWeight: FontWeight.w500),
             ),
           ),
           Container(
@@ -229,14 +222,14 @@ class OurFeaturesScreen extends StatelessWidget {
                     ),
                   ),
                   SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
+                    scrollDirection: Axis.vertical,
+                    child: Column(
                       children: <Widget>[
-                        _cards('We', 'Create',
+                        _cards('We Create',
                             'We at CSI not only try, rather we do the things which helps us create something which is still an imagination for most, and we create those platforms which enables others to put out their innovative ideas and beliefs, to create a better world.'),
-                        _cards('We', 'Share',
+                        _cards('We Share',
                             'We at CSI not only try, rather we do the things which helps us create something which is still an imagination for most, and we create those platforms which enables others to put out their innovative ideas and beliefs, to create a better world.'),
-                        _cards('We', 'Innovate',
+                        _cards('We Innovate',
                             'We at CSI not only try, rather we do the things which helps us create something which is still an imagination for most, and we create those platforms which enables others to put out their innovative ideas and beliefs, to create a better world.'),
                       ],
                     ),

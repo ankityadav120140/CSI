@@ -1,8 +1,9 @@
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 
 class Individual extends StatelessWidget {
   final String name;
@@ -13,26 +14,25 @@ class Individual extends StatelessWidget {
 
   const Individual(
     this.name,
-
     this.imageUrl,
-      this.facebookUrl,
-      this.githubUrl,
-      this.linkedinUrl,
+    this.facebookUrl,
+    this.githubUrl,
+    this.linkedinUrl,
   );
-
 
   @override
   Widget build(BuildContext context) {
+    void _launchURLF() async => await canLaunch(facebookUrl)
+        ? await launch(facebookUrl)
+        : throw 'Could not launch $facebookUrl';
 
+    void _launchURLG() async => await canLaunch(githubUrl)
+        ? await launch(githubUrl)
+        : throw 'Could not launch $githubUrl';
 
-     void _launchURLF() async =>
-    await canLaunch(facebookUrl) ? await launch(facebookUrl) : throw 'Could not launch $facebookUrl';
-
-     void _launchURLG() async =>
-         await canLaunch(githubUrl) ? await launch(githubUrl) : throw 'Could not launch $githubUrl';
-
-     void _launchURLL() async =>
-         await canLaunch(linkedinUrl) ? await launch(linkedinUrl) : throw 'Could not launch $linkedinUrl';
+    void _launchURLL() async => await canLaunch(linkedinUrl)
+        ? await launch(linkedinUrl)
+        : throw 'Could not launch $linkedinUrl';
 
     return InkWell(
         child: Stack(
@@ -121,8 +121,4 @@ class Individual extends StatelessWidget {
       ],
     ));
   }
-
-
 }
-
-
