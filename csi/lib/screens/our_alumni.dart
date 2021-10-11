@@ -2,7 +2,8 @@
 
 import 'package:csi/widgets/app_drawer.dart';
 import 'package:csi/widgets/individual.dart';
-import 'package:csi/widgets/second_year_data.dart';
+import 'package:csi/widgets/our_alumni.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -166,7 +167,7 @@ class _our_alumniState extends State<our_alumni> {
                           mainAxisSpacing: 30,
                           childAspectRatio: 156 / 190,
                         ),
-                        children: secondYearData
+                        children: alumniYearData
                             .map(
                               (indData) => Individual(
                                 indData.name,

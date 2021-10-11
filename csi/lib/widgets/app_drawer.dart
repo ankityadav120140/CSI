@@ -546,7 +546,7 @@ class _AppDrawerState extends State<AppDrawer> {
                                     ),
                                   ),
                                   onTap: () {
-                                    Navigator.pushNamed(context, 'second_year');
+                                    //Navigator.pushNamed(context, 'second_year');
                                   },
                                 ),
                               ),

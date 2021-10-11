@@ -69,6 +69,7 @@ flutter:
     - assets/images/thirdYear/
     - assets/images/fourthYear/
     - assets/icons/
+    - assets/images/ourAlumni/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
