@@ -6,7 +6,7 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../widgets/app_drawer.dart';
-import '../widgets/individual.dart';
+import '../widgets/newindividual.dart';
 import '../widgets/third_year_data.dart';
 
 class ThirdYearScreen extends StatelessWidget {
@@ -166,7 +166,7 @@ class ThirdYearScreen extends StatelessWidget {
                         ),
                         children: thirdYearData
                             .map(
-                              (indData) => Individual(
+                              (indData) => NewIndividual(
                                 indData.name,
                                 indData.imageUrl,
                                 indData.facebookUrl,
