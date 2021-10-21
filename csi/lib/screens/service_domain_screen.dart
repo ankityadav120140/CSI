@@ -62,22 +62,25 @@ class ServiceDomain extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.only(bottom: 10),
-                      child: Text(
-                        title1,
-                        style: GoogleFonts.poppins(
-                            color: Colors.black,
-                            fontSize: 30,
-                            height: 1,
-                            fontWeight: FontWeight.w500),
-                        // style: TextStyle(
-                        //   color: Colors.black,
-                        //   fontSize: 35,
-                        //   fontFamily: 'PlayfairDisplay',
-                        //   fontWeight: FontWeight.w500,
+                    FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Container(
+                        margin: EdgeInsets.only(bottom: 10),
+                        child: Text(
+                          title1,
+                          style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontSize: 30,
+                              height: 1,
+                              fontWeight: FontWeight.w500),
+                          // style: TextStyle(
+                          //   color: Colors.black,
+                          //   fontSize: 35,
+                          //   fontFamily: 'PlayfairDisplay',
+                          //   fontWeight: FontWeight.w500,
 
-                        // ),
+                          // ),
+                        ),
                       ),
                     ),
                     Container(
@@ -104,7 +107,7 @@ class ServiceDomain extends StatelessWidget {
 
   Widget _cardsr(String title1, String para) {
     return Container(
-      height: 275,
+      height: 290,
       decoration: BoxDecoration(
         color: HexColor('#E7F3FF'),
         borderRadius: BorderRadius.circular(40),
@@ -142,22 +145,25 @@ class ServiceDomain extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.only(bottom: 10),
-                      child: Text(
-                        title1,
-                        style: GoogleFonts.poppins(
-                            color: Colors.black,
-                            fontSize: 30,
-                            height: 1,
-                            fontWeight: FontWeight.w500),
-                        // style: TextStyle(
-                        //   color: Colors.black,
-                        //   fontSize: 35,
-                        //   fontFamily: 'PlayfairDisplay',
-                        //   fontWeight: FontWeight.w500,
+                    FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Container(
+                        margin: EdgeInsets.only(bottom: 10),
+                        child: Text(
+                          title1,
+                          style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontSize: 30,
+                              height: 1,
+                              fontWeight: FontWeight.w500),
+                          // style: TextStyle(
+                          //   color: Colors.black,
+                          //   fontSize: 35,
+                          //   fontFamily: 'PlayfairDisplay',
+                          //   fontWeight: FontWeight.w500,
 
-                        // ),
+                          // ),
+                        ),
                       ),
                     ),
                     Container(

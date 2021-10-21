@@ -188,22 +188,27 @@ class ContactUs extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 // ignore: prefer_const_literals_to_create_immutables
                                 children: <Widget>[
-                                  Text(
-                                    'Address',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontFamily: 'Poppins',
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 20,
+                                  Container(
+                                    child: Text(
+                                      'Address',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 20,
+                                      ),
                                     ),
                                   ),
                                   Container(
-                                    child: Text(
-                                      '- Basic IT Lab, Third Floor, CS-IT Block, Ajay Kumar Garg \n  Engineering College, Ghaziabad - 201009',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontFamily: 'Roboto-Regular',
-                                        fontSize: 13,
+                                    child: FittedBox(
+                                      fit: BoxFit.scaleDown,
+                                      child: Text(
+                                        '- Basic IT Lab, Third Floor, CS-IT Block, Ajay Kumar Garg \n  Engineering College, Ghaziabad - 201009',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontFamily: 'Roboto-Regular',
+                                          fontSize: 13,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -224,21 +229,25 @@ class ContactUs extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 // ignore: prefer_const_literals_to_create_immutables
                                 children: <Widget>[
-                                  Text(
-                                    'E-mail',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontFamily: 'Poppins',
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 20,
+                                  Container(
+                                    child: Text(
+                                      'E-mail',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 20,
+                                      ),
                                     ),
                                   ),
-                                  Text(
-                                    '- csi@outlook.in',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontFamily: 'Roboto-Regular',
-                                      fontSize: 15,
+                                  Container(
+                                    child: Text(
+                                      '- csi@outlook.in',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontFamily: 'Roboto-Regular',
+                                        fontSize: 15,
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -258,22 +267,26 @@ class ContactUs extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 // ignore: prefer_const_literals_to_create_immutables
                                 children: <Widget>[
-                                  Text(
-                                    'Call Us',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontFamily: 'Poppins',
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 20,
+                                  Container(
+                                    child: Text(
+                                      'Call Us',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 20,
+                                      ),
                                     ),
                                   ),
                                   GestureDetector(
-                                    child: Text(
-                                      '- +91-8802980454, +91-7417387372',
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontFamily: 'Roboto-Regular',
-                                        fontSize: 15,
+                                    child: Container(
+                                      child: Text(
+                                        '- +91-8802980454, +91-7417387372',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontFamily: 'Roboto-Regular',
+                                          fontSize: 15,
+                                        ),
                                       ),
                                     ),
                                   ),

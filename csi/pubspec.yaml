@@ -39,6 +39,9 @@ dependencies:
   google_fonts: ^2.1.0
   url_launcher: ^6.0.10
   introduction_screen: ^2.1.0
+  hexagon: ^0.2.0-nullsafety.1
+  carousel_slider: ^4.0.0
+  smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:
   flutter_test:

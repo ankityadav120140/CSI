@@ -38,9 +38,10 @@ class MyApp extends StatelessWidget {
       title: 'CSI',
       theme: ThemeData(),
       home: ContactUs(),
-      initialRoute: 'home',
+      initialRoute: 'onboarding',
       routes: {
-        'home': (context) => OnBoardingPage(),
+        'onboarding': (context) => OnBoardingPage(),
+        'home': (context) => HomeScreen(),
         'our_features': (context) => OurFeaturesScreen(),
         'second_year': (context) => SecondYearScreen(),
         'third_year': (context) => ThirdYearScreen(),
