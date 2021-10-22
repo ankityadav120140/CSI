@@ -24,7 +24,7 @@ List<AlumniYear> alumniYearData = const [
     githubUrl: 'https://github.com/Abhishek0402',
     linkedinUrl: 'https://www.linkedin.com/in/abhishek-gupta-92600916b/',
     facebookUrl: 'https://www.facebook.com/AbhishekGupta160898',
-    imageUrl: 'assets/images/fourthYear/aayush.jpg',
+    imageUrl: 'assets/images/ourAlumni/abhishek.jpg',
   ),
   AlumniYear(
     name: 'Aditya Rathi',

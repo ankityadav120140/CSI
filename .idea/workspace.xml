@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
@@ -23,86 +26,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76710970-400d-4d56-9573-6b664c29a631" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/csi/android/settings_aar.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/icons/instagram.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/AKANKSHA GUPTA.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Aditi Mishra.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Akash Gupta.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Aman Tyagi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Anisha Srivastava.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Ankit Yadav.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Apurv Rai.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Ayush.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Ayushi Singh.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Ayushi Tyagi.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Deepak Gupta.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Divykant Sengar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Harsh Vardhan Singh.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Keshav Arora.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Niharika Varshney.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Prerit Mishra.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Rajat Mangat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Satyam Singh.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/Ujjwal Agarwal.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/assets/images/thirdYear/yash jaiswal.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/csi/lib/widgets/newindividual.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/com/example/csi/BuildConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/com/example/csi/Manifest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/com/example/csi/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CSI2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CSI2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/csi/android/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firebase-debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/fourthYear/aadi.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/aadi.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/fourthYear/aanchal.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/aanchal.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/fourthYear/alok.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/alok.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/fourthYear/amit.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/amit.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/fourthYear/ankish.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/ankish.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/fourthYear/muskan.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/muskan.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/fourthYear/pragati.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/pragati.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/fourthYear/saxena.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/saxena.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/fourthYear/shashwat.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/shashwat.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/fourthYear/shubh.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/shubh.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/fourthYear/sonali.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/sonali.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/fourthYear/vats.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/vats.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/fourthYear/yashvi.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/yashvi.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/secondYear/Anchal.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/fourthYear/Anchal.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/secondYear/Harsh.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/fourthYear/Harsh.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/secondYear/aayush.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/fourthYear/aayush.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/secondYear/abhishek.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/fourthYear/abhishek.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/secondYear/aditya.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/fourthYear/aditya.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/secondYear/akhilesh.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/fourthYear/akhilesh.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/secondYear/anshika.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/fourthYear/anshika.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/secondYear/arnav.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/secondYear/ayushporwal3843.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/fourthYear/ayushporwal3843.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/secondYear/ishika.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/secondYear/shivam.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/secondYear/sonakshi.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/fourthYear/sonakshi.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/secondYear/vikalp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/fourthYear/vikalp.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/thirdYear/abhishek.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/abhishek.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/thirdYear/bhawana.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/bhawana.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/thirdYear/gaurav.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/gaurav.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/thirdYear/harsh.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/harsh.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/thirdYear/pramod.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/pramod.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/thirdYear/priyam.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/priyam.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/thirdYear/rathi.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/rathi.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/thirdYear/saumya.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/saumya.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/thirdYear/siddhartha.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/siddhartha.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/thirdYear/subhanshu.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/subhanshu.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/assets/images/thirdYear/ujjawal.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/csi/assets/images/ourAlumni/ujjawal.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/lib/screens/our_alumni.dart" beforeDir="false" afterPath="$PROJECT_DIR$/csi/lib/screens/our_alumni.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/lib/screens/third_year_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/csi/lib/screens/third_year_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/lib/widgets/app_drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/csi/lib/widgets/app_drawer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/lib/widgets/fourth_year_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/csi/lib/widgets/fourth_year_data.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csi/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/csi/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csi/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/csi/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csi/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/csi/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csi/lib/screens/Login_registration.dart" beforeDir="false" afterPath="$PROJECT_DIR$/csi/lib/screens/Login_registration.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csi/lib/screens/registration_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/csi/lib/screens/registration_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csi/lib/screens/service_domain_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/csi/lib/screens/service_domain_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csi/lib/widgets/InputField.dart" beforeDir="false" afterPath="$PROJECT_DIR$/csi/lib/widgets/InputField.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csi/lib/widgets/our_alumni.dart" beforeDir="false" afterPath="$PROJECT_DIR$/csi/lib/widgets/our_alumni.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/lib/widgets/third_year_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/csi/lib/widgets/third_year_data.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csi/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/csi/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csi/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/csi/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/com/example/csi/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/com/example/csi/BuildConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[IJUC4DZHHEIJIZP7]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -120,15 +65,18 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/csi/assets/icons" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AndroidStudioProjects/fluttershare" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -187,25 +135,33 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="121" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1633858570380" />
-    <state x="147" y="179" width="544" height="567" key="FileChooserDialogImpl" timestamp="1633858566992">
+    <state x="147" y="179" width="544" height="567" key="FileChooserDialogImpl" timestamp="1634820049299">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="147" y="179" width="544" height="567" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1633858566992" />
-    <state width="1481" height="192" key="GridCell.Tab.0.bottom" timestamp="1633956018756">
+    <state x="147" y="179" width="544" height="567" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1634820049299" />
+    <state width="1481" height="192" key="GridCell.Tab.0.bottom" timestamp="1634910549278">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="192" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1633956018756" />
-    <state width="1481" height="192" key="GridCell.Tab.0.center" timestamp="1633956018756">
+    <state width="1481" height="192" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1634910549278" />
+    <state width="1481" height="192" key="GridCell.Tab.0.center" timestamp="1634910549278">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="192" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1633956018756" />
-    <state width="1481" height="192" key="GridCell.Tab.0.left" timestamp="1633956018756">
+    <state width="1481" height="192" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1634910549278" />
+    <state width="1481" height="192" key="GridCell.Tab.0.left" timestamp="1634910549277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="192" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1633956018756" />
-    <state width="1481" height="192" key="GridCell.Tab.0.right" timestamp="1633956018756">
+    <state width="1481" height="192" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1634910549277" />
+    <state width="1481" height="192" key="GridCell.Tab.0.right" timestamp="1634910549278">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="192" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1633956018756" />
+    <state width="1481" height="192" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1634910549278" />
+    <state x="93" y="0" width="1457" height="647" key="dock-window-1" timestamp="1634845817451">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="0" width="1457" height="647" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1634845817451" />
+    <state x="341" y="183" key="run.anything.popup" timestamp="1633959651419">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="341" y="183" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1633959651419" />
   </component>
 </project>
