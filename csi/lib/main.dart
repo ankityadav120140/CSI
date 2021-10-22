@@ -75,7 +75,5 @@ class MyApp extends StatelessWidget {
       });
        }
       return CircularProgressIndicator();
-      },
-    );
   }
   }

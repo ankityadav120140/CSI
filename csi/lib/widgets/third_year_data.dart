@@ -50,7 +50,8 @@ List<ThirdYear> thirdYearData = const [
     name: 'Anisha Srivastava',
     githubUrl: 'https://github.com/anisha2508',
     linkedinUrl: 'https://www.linkedin.com/in/anisha-srivastava-8005881b5',
-    facebookUrl: 'https://instagram.com/anisha_srivastavaa?igshid=t2z5rk8fzbm6s',
+    facebookUrl:
+        'https://instagram.com/anisha_srivastavaa?igshid=t2z5rk8fzbm6s',
     imageUrl: 'assets/images/thirdYear/Anisha Srivastava.jpg',
   ),
   ThirdYear(
@@ -70,7 +71,8 @@ List<ThirdYear> thirdYearData = const [
   ThirdYear(
     name: 'Ayush Khandelwal',
     githubUrl: 'https://github.com/ayushkwal',
-    linkedinUrl: 'https://www.linkedin.com/mwlite/in/ayush-khandelwal-2058b71aa',
+    linkedinUrl:
+        'https://www.linkedin.com/mwlite/in/ayush-khandelwal-2058b71aa',
     facebookUrl: 'https://www.instagram.com/ayush_khandelwal08/',
     imageUrl: 'assets/images/thirdYear/Ayush.jpg',
   ),
@@ -152,7 +154,7 @@ List<ThirdYear> thirdYearData = const [
     imageUrl: 'assets/images/thirdYear/Ujjwal Agarwal.jpg',
   ),
   ThirdYear(
-    name: 'Bhadwa',
+    name: 'Yash Jaiswal',
     githubUrl: 'https://github.com/yashj-7',
     linkedinUrl: 'https://www.linkedin.com/in/yash-jaiswal-8955011b5/',
     facebookUrl: 'https://www.instagram.com/yashj_7_/',

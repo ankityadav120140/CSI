@@ -407,7 +407,7 @@ class _AppDrawerState extends State<AppDrawer> {
                                           //   color: HexColor('#2D2871'),
                                           // ),
                                           title: Text(
-                                            "Wev Development",
+                                            "Web Development",
                                             style: TextStyle(
                                               fontSize: 16,
                                               color: Colors.black,
