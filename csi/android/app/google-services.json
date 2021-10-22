@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "442928885474",
+    "project_id": "csiapp-6f042",
+    "storage_bucket": "csiapp-6f042.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442928885474:android:64f70232f849b6856678bb",
+        "android_client_info": {
+          "package_name": "com.example.csi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "442928885474-duf6r6leo6k1vvdk5vcoo326vcejbvba.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.csi",
+            "certificate_hash": "ea37ce2872f12cfe9a1719b4d28b43a8edd06dd4"
+          }
+        },
+        {
+          "client_id": "442928885474-khkkepnma54p7ilu8p4tahlmqfsr3rnt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBl8T0G_iiWfsYdLbXwlpFN1ZhXQFSF6ys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "442928885474-khkkepnma54p7ilu8p4tahlmqfsr3rnt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
