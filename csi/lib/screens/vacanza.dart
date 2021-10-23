@@ -1,5 +1,6 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, unnecessary_new, use_key_in_widget_constructors, camel_case_types, deprecated_member_use
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, unnecessary_new, use_key_in_widget_constructors, camel_case_types, deprecated_member_use, unused_local_variable
 
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -33,6 +34,7 @@ class _vacanzaState extends State<vacanza> {
             children: [
               Container(
                 height: 200,
+                width: 280,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
                   color: Colors.white,
@@ -84,132 +86,13 @@ class _vacanzaState extends State<vacanza> {
                   ),
                   elevation: 5,
                   color: HexColor('#79B6FC'),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, route);
+                  },
                 ),
               )
             ],
           ),
-        ),
-      );
-    }
-
-    Widget _leftHive(String img1, String img2, String img3) {
-      return Container(
-        margin: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(3),
-                  ),
-                  child: ClipRRect(
-                    // borderRadius: BorderRadius.circular(80),
-                    child: Image(
-                      image: AssetImage(img1),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Image(
-                    image: AssetImage(img2),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  margin: const EdgeInsets.only(left: 60),
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Image(
-                    image: AssetImage(img3),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      );
-    }
-
-    Widget _rightHive(String img1, String img2, String img3) {
-      return Container(
-        margin: const EdgeInsets.all(20),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        // borderRadius: BorderRadius.circular(3),
-                      ),
-                      child: Image(
-                        image: AssetImage(img1),
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        // borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Image(
-                        image: AssetImage(img2),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.only(right: 60),
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        // borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Image(
-                        image: AssetImage(img3),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ],
         ),
       );
     }
@@ -303,6 +186,19 @@ class _vacanzaState extends State<vacanza> {
         ),
       );
     }
+
+    var aIndex = 0;
+    final eventImg = [
+      'assets/images/vacanza/vac1.jpg',
+      'assets/images/vacanza/vac2.jpg',
+      'assets/images/vacanza/vac3.jpg',
+      'assets/images/vacanza/vac4.jpg',
+      'assets/images/vacanza/vac5.jpg',
+      'assets/images/vacanza/vac6.jpg',
+      'assets/images/vacanza/vac7.jpg',
+      'assets/images/vacanza/vac8.jpg',
+      'assets/images/vacanza/vac9.jpg',
+    ];
 
     return Scaffold(
       backgroundColor: HexColor('#E7F3FF'),
@@ -522,26 +418,25 @@ class _vacanzaState extends State<vacanza> {
                       ),
                     ),
                   ),
-                  SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        _leftHive(
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png'),
-                        _rightHive(
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png'),
-                        _leftHive(
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png'),
-                      ],
-                    ),
+                  CarouselSlider.builder(
+                    itemCount: eventImg.length,
+                    itemBuilder: (context, index, realIndex) {
+                      final eImg = eventImg[index];
+                      return buildImage(eImg, index);
+                    },
+                    options: CarouselOptions(
+                        height: 400,
+                        enlargeCenterPage: true,
+                        enableInfiniteScroll: false,
+                        enlargeStrategy: CenterPageEnlargeStrategy.height,
+                        onPageChanged: (index, reason) {
+                          setState(() {
+                            aIndex = index;
+                          });
+                        }),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: mediaQuery.size.height * 0.1),
+                    // margin: EdgeInsets.only(top: mediaQuery.size.height * 0.1),
                     child: ClipRRect(
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(32),
@@ -655,11 +550,6 @@ class _vacanzaState extends State<vacanza> {
                           'assets/images/rdm.png',
                           'rdm',
                         ),
-                        _events(
-                          'Vacanza',
-                          'assets/images/vacanza.png',
-                          'vacanza',
-                        ),
                       ],
                     ),
                   )
@@ -668,6 +558,19 @@ class _vacanzaState extends State<vacanza> {
             ),
           ],
         )),
+      ),
+    );
+  }
+
+  Widget buildImage(String wsImage, int index) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 20),
+      // color: Colors.grey,
+      child: Image(
+        image: AssetImage(
+          wsImage,
+        ),
+        fit: BoxFit.contain,
       ),
     );
   }

@@ -30,15 +30,12 @@ class _aboutUsState extends State<aboutUs> {
             Container(
               margin: EdgeInsets.only(left: 10),
               width: double.infinity,
-              // height: mediaQuery.size.height * 0.28,
+              height: 300,
               decoration: BoxDecoration(
                 color: HexColor('#E7F3FF'),
                 image: DecorationImage(
-                  image: AssetImage('assets/images/csi.png'),
-                  // colorFilter: ColorFilter(
-
-                  // ),
-                  fit: BoxFit.cover,
+                  image: AssetImage('assets/images/csi_logo.png'),
+                  fit: BoxFit.contain,
                 ),
               ),
               child: Column(
@@ -89,7 +86,13 @@ class _aboutUsState extends State<aboutUs> {
               ),
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Colors.white,
+                gradient: LinearGradient(
+                  colors: [HexColor('#79B6FC'), Colors.white],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  stops: [0.5, 1.8],
+                ),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(32),
                   topRight: Radius.circular(32),
@@ -111,7 +114,7 @@ class _aboutUsState extends State<aboutUs> {
                         width: 250,
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
-                            colors: [HexColor('#79B6FC'), Colors.white],
+                            colors: [Colors.blue.shade900, HexColor('#79B6FC')],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                             // ignore: prefer_const_literals_to_create_immutables

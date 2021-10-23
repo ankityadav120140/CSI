@@ -1,5 +1,6 @@
-// ignore_for_file: use_key_in_widget_constructors, unnecessary_new, prefer_const_constructors, prefer_const_literals_to_create_immutables, duplicate_ignore, avoid_unnecessary_containers
+// ignore_for_file: use_key_in_widget_constructors, unnecessary_new, prefer_const_constructors, prefer_const_literals_to_create_immutables, duplicate_ignore, avoid_unnecessary_containers, deprecated_member_use, unused_import
 
+import 'package:csi/screens/cine.dart';
 import 'package:csi/widgets/app_drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +32,7 @@ class JoinUs extends StatelessWidget {
         ],
       ),
       margin: EdgeInsets.only(
-        top: 60,
+        top: 30,
         left: 10,
         right: 10,
       ),
@@ -48,6 +49,7 @@ class JoinUs extends StatelessWidget {
             width: 50,
             alignment: Alignment.center,
             decoration: BoxDecoration(
+              // border: Border.symmetric(vertical: ),
               borderRadius: BorderRadius.only(
                   topRight: Radius.circular(300),
                   bottomRight: Radius.circular(300)),
@@ -122,6 +124,7 @@ class JoinUs extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Container(
+                height: 220,
                 margin: EdgeInsets.only(left: 10.0),
                 width: double.infinity,
                 //height: mediaQuery.size.height * 0.28,
@@ -150,7 +153,7 @@ class JoinUs extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      height: 130,
+                      // height: 0,
                       padding: EdgeInsets.only(top: 10),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -163,7 +166,7 @@ class JoinUs extends StatelessWidget {
                             ),
 
                             child: Text(
-                              'Join',
+                              '',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontFamily: 'Poppins',
@@ -180,7 +183,7 @@ class JoinUs extends StatelessWidget {
                             ),
 
                             child: Text(
-                              'Us',
+                              '',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontFamily: 'Poppins',
@@ -214,34 +217,16 @@ class JoinUs extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Container(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(32),
-                          bottomRight: Radius.circular(32),
-                        ),
-                        child: Container(
-                          padding: EdgeInsets.only(left: 20),
-                          alignment: Alignment.centerLeft,
-                          height: 50,
-                          width: 120,
-                          // color: HexColor('#79B6FC'),
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [HexColor('#79B6FC'), Colors.white],
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                              stops: [0.5, 1.8],
-                            ),
-                          ),
-                          child: Text(
-                            'Join',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ),
+                      margin: EdgeInsets.only(
+                        left: mediaQuery.size.height * 0.03,
+                        // bottom: mediaQuery.size.height * 0.03,
+                      ),
+                      child: Text(
+                        'Join Us',
+                        style: TextStyle(
+                            fontSize: 35,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w400),
                       ),
                     ),
                     SingleChildScrollView(
@@ -257,6 +242,38 @@ class JoinUs extends StatelessWidget {
                               'Prove your worth in the mano-a-mano interview round.'),
                         ],
                       ),
+                    ),
+                    Center(
+                      child: Container(
+                        margin: EdgeInsets.only(top: 40),
+                        child: RaisedButton(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              vertical: 18,
+                              horizontal: 30,
+                            ),
+                            child: Text(
+                              "CINE",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w500),
+                            ),
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(32),
+                          ),
+                          elevation: 5,
+                          color: HexColor('#79B6FC'),
+                          onPressed: () {
+                            Navigator.pushNamed(context, "cine");
+                          },
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: mediaQuery.size.height * 0.03,
                     )
                   ],
                 ),

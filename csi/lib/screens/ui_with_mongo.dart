@@ -1,5 +1,6 @@
-// ignore_for_file: camel_case_types, unnecessary_new, prefer_const_constructors, deprecated_member_use, dead_code, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables
+// ignore_for_file: camel_case_types, unnecessary_new, prefer_const_constructors, deprecated_member_use, dead_code, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, unused_local_variable, sized_box_for_whitespace
 
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -66,6 +67,7 @@ class _ui_with_mongoState extends State<ui_with_mongo> {
                 ),
               ),
               Container(
+                // width: 200,
                 child: RaisedButton(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
@@ -86,132 +88,13 @@ class _ui_with_mongoState extends State<ui_with_mongo> {
                   ),
                   elevation: 5,
                   color: HexColor('#79B6FC'),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, route);
+                  },
                 ),
               )
             ],
           ),
-        ),
-      );
-    }
-
-    Widget _leftHive(String img1, String img2, String img3) {
-      return Container(
-        margin: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(3),
-                  ),
-                  child: ClipRRect(
-                    // borderRadius: BorderRadius.circular(80),
-                    child: Image(
-                      image: AssetImage(img1),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Image(
-                    image: AssetImage(img2),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  margin: const EdgeInsets.only(left: 60),
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Image(
-                    image: AssetImage(img3),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      );
-    }
-
-    Widget _rigthHive(String img1, String img2, String img3) {
-      return Container(
-        margin: const EdgeInsets.all(20),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        // borderRadius: BorderRadius.circular(3),
-                      ),
-                      child: Image(
-                        image: AssetImage(img1),
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        // borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Image(
-                        image: AssetImage(img2),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.only(right: 60),
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        // borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Image(
-                        image: AssetImage(img3),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ],
         ),
       );
     }
@@ -305,6 +188,16 @@ class _ui_with_mongoState extends State<ui_with_mongo> {
         ),
       );
     }
+
+    var aIndex = 0;
+    final wsImages = [
+      'assets/images/workshops/u1.jpg',
+      'assets/images/workshops/u2.jpg',
+      'assets/images/workshops/u3.jpg',
+      'assets/images/workshops/u4.jpg',
+      'assets/images/workshops/u5.jpg',
+      'assets/images/workshops/u6.jpeg',
+    ];
 
     return Scaffold(
       backgroundColor: HexColor('#E7F3FF'),
@@ -524,26 +417,26 @@ class _ui_with_mongoState extends State<ui_with_mongo> {
                       ),
                     ),
                   ),
-                  SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        _leftHive(
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png'),
-                        _rigthHive(
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png'),
-                        _leftHive(
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png'),
-                      ],
-                    ),
+                  CarouselSlider.builder(
+                    itemCount: wsImages.length,
+                    itemBuilder: (context, index, realIndex) {
+                      final wImg = wsImages[index];
+                      return buildImage(wImg, index);
+                    },
+                    options: CarouselOptions(
+                        height: 400,
+                        enlargeCenterPage: true,
+                        enableInfiniteScroll: false,
+                        enlargeStrategy: CenterPageEnlargeStrategy.height,
+                        onPageChanged: (index, reason) {
+                          setState(() {
+                            aIndex = index;
+                          });
+                        }),
                   ),
+
                   Container(
-                    margin: EdgeInsets.only(top: mediaQuery.size.height * 0.1),
+                    // margin: EdgeInsets.only(top: mediaQuery.size.height * 0.1),
                     child: ClipRRect(
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(32),
@@ -643,11 +536,6 @@ class _ui_with_mongoState extends State<ui_with_mongo> {
                     child: Row(
                       children: <Widget>[
                         _workshop(
-                          'UI With MongoDB',
-                          'assets/images/workshop.png',
-                          'ui_with_mongo',
-                        ),
-                        _workshop(
                           'Java And Android',
                           'assets/images/workshop.png',
                           'java_and_android',
@@ -685,6 +573,19 @@ class _ui_with_mongoState extends State<ui_with_mongo> {
             ),
           ],
         )),
+      ),
+    );
+  }
+
+  Widget buildImage(String wsImage, int index) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 20),
+      // color: Colors.grey,
+      child: Image(
+        image: AssetImage(
+          wsImage,
+        ),
+        fit: BoxFit.contain,
       ),
     );
   }

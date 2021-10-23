@@ -1,5 +1,6 @@
-// ignore_for_file: camel_case_types, unnecessary_new, deprecated_member_use, prefer_const_constructors, dead_code, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables
+// ignore_for_file: camel_case_types, unnecessary_new, deprecated_member_use, prefer_const_constructors, dead_code, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, unused_local_variable
 
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -84,132 +85,13 @@ class _ethical_hackingState extends State<ethical_hacking> {
                   ),
                   elevation: 5,
                   color: HexColor('#79B6FC'),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, route);
+                  },
                 ),
               )
             ],
           ),
-        ),
-      );
-    }
-
-    Widget _leftHive(String img1, String img2, String img3) {
-      return Container(
-        margin: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(3),
-                  ),
-                  child: ClipRRect(
-                    // borderRadius: BorderRadius.circular(80),
-                    child: Image(
-                      image: AssetImage(img1),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Image(
-                    image: AssetImage(img2),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  margin: const EdgeInsets.only(left: 60),
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Image(
-                    image: AssetImage(img3),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      );
-    }
-
-    Widget _rightHive(String img1, String img2, String img3) {
-      return Container(
-        margin: const EdgeInsets.all(20),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        // borderRadius: BorderRadius.circular(3),
-                      ),
-                      child: Image(
-                        image: AssetImage(img1),
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        // borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Image(
-                        image: AssetImage(img2),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.only(right: 60),
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        // borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Image(
-                        image: AssetImage(img3),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ],
         ),
       );
     }
@@ -303,6 +185,16 @@ class _ethical_hackingState extends State<ethical_hacking> {
         ),
       );
     }
+
+    var aIndex = 0;
+    final wsImages = [
+      'assets/images/workshops/j1.jpg',
+      'assets/images/workshops/j2.jpg',
+      'assets/images/workshops/j3.jpg',
+      'assets/images/workshops/j4.jpg',
+      'assets/images/workshops/j6.jpg',
+      'assets/images/workshops/j8.jpg',
+    ];
 
     return Scaffold(
       backgroundColor: HexColor('#E7F3FF'),
@@ -522,26 +414,25 @@ class _ethical_hackingState extends State<ethical_hacking> {
                       ),
                     ),
                   ),
-                  SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        _leftHive(
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png'),
-                        _rightHive(
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png'),
-                        _leftHive(
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png'),
-                      ],
-                    ),
+                  CarouselSlider.builder(
+                    itemCount: wsImages.length,
+                    itemBuilder: (context, index, realIndex) {
+                      final wImg = wsImages[index];
+                      return buildImage(wImg, index);
+                    },
+                    options: CarouselOptions(
+                        height: 400,
+                        enlargeCenterPage: true,
+                        enableInfiniteScroll: false,
+                        enlargeStrategy: CenterPageEnlargeStrategy.height,
+                        onPageChanged: (index, reason) {
+                          setState(() {
+                            aIndex = index;
+                          });
+                        }),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: mediaQuery.size.height * 0.1),
+                    // margin: EdgeInsets.only(top: mediaQuery.size.height * 0.1),
                     child: ClipRRect(
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(32),
@@ -651,11 +542,6 @@ class _ethical_hackingState extends State<ethical_hacking> {
                           'java_and_android',
                         ),
                         _workshop(
-                          'Ethical Hacking',
-                          'assets/images/workshop.png',
-                          'ethical_hacking',
-                        ),
-                        _workshop(
                           'WEb Development',
                           'assets/images/workshop.png',
                           'web_dev',
@@ -686,4 +572,17 @@ class _ethical_hackingState extends State<ethical_hacking> {
       ),
     );
   }
+}
+
+Widget buildImage(String wsImage, int index) {
+  return Container(
+    margin: const EdgeInsets.symmetric(horizontal: 20),
+    // color: Colors.grey,
+    child: Image(
+      image: AssetImage(
+        wsImage,
+      ),
+      fit: BoxFit.contain,
+    ),
+  );
 }

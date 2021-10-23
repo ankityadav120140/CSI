@@ -15,19 +15,19 @@ class OnBoardingPage extends StatelessWidget {
           PageViewModel(
             title: 'About our Team',
             body: 'The quick brown fox jumps right over the around lazy dog.',
-            image: buildImage(),
+            image: buildImage('assets/images/team ob.png'),
             decoration: getPageDecoration(),
           ),
           PageViewModel(
             title: 'Get to know Us',
             body: 'The quick brown fox jumps right over the aound lazy dog',
-            image: buildImage(),
+            image: buildImage('assets/images/know us ob.png'),
             decoration: getPageDecoration(),
           ),
           PageViewModel(
             title: "Let's get Started",
             body: 'The man who never reads lives only one',
-            image: buildImage(),
+            image: buildImage('assets/images/started ob.png'),
             decoration: getPageDecoration(),
           ),
         ],
@@ -92,12 +92,14 @@ class OnBoardingPage extends StatelessWidget {
         MaterialPageRoute(builder: (_) => HomeScreen()),
       );
 
-  Widget buildImage() => Container(
+  Widget buildImage(String img) => Container(
         width: double.infinity,
         height: 400,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/our feature page bg.png'),
+            image: AssetImage(
+              img,
+            ),
             fit: BoxFit.contain,
           ),
         ),

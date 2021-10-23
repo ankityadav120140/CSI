@@ -5,6 +5,7 @@ import 'package:csi/widgets/individual.dart';
 import 'package:csi/widgets/our_alumni.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -37,8 +38,11 @@ class _our_alumniState extends State<our_alumni> {
                 decoration: BoxDecoration(
                   color: HexColor('#E7F3FF'),
                   image: DecorationImage(
-                    image: AssetImage('assets/images/our team bg.png'),
+                    image: AssetImage(
+                      'assets/images/our team bg.png',
+                    ),
                     fit: BoxFit.contain,
+                    colorFilter: ColorFilter.linearToSrgbGamma(),
                   ),
                 ),
                 child: Column(
@@ -146,7 +150,7 @@ class _our_alumniState extends State<our_alumni> {
                             ),
                           ),
                           child: Text(
-                            'OUR ALUMNI',
+                            'Our Alumni',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 16,

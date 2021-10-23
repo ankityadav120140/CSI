@@ -30,7 +30,7 @@ class ContactUs extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: HexColor('#E7F3FF'),
                   image: DecorationImage(
-                    image: AssetImage('assets/images/home_page_bg.png'),
+                    image: AssetImage('assets/images/Contact Us.png'),
                     fit: BoxFit.fill,
                   ),
                 ),

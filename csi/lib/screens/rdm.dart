@@ -1,10 +1,8 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, unnecessary_new, use_key_in_widget_constructors, camel_case_types, deprecated_member_use
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, unnecessary_new, use_key_in_widget_constructors, camel_case_types, deprecated_member_use, unused_local_variable
 
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../widgets/app_drawer.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -34,6 +32,7 @@ class _rdmState extends State<rdm> {
           child: Column(
             children: [
               Container(
+                width: 280,
                 height: 200,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
@@ -86,132 +85,13 @@ class _rdmState extends State<rdm> {
                   ),
                   elevation: 5,
                   color: HexColor('#79B6FC'),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, route);
+                  },
                 ),
               )
             ],
           ),
-        ),
-      );
-    }
-
-    Widget _leftHive(String img1, String img2, String img3) {
-      return Container(
-        margin: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(3),
-                  ),
-                  child: ClipRRect(
-                    // borderRadius: BorderRadius.circular(80),
-                    child: Image(
-                      image: AssetImage(img1),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Image(
-                    image: AssetImage(img2),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  margin: const EdgeInsets.only(left: 60),
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Image(
-                    image: AssetImage(img3),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      );
-    }
-
-    Widget _rightHive(String img1, String img2, String img3) {
-      return Container(
-        margin: const EdgeInsets.all(20),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        // borderRadius: BorderRadius.circular(3),
-                      ),
-                      child: Image(
-                        image: AssetImage(img1),
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        // borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Image(
-                        image: AssetImage(img2),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.only(right: 60),
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        // borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Image(
-                        image: AssetImage(img3),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ],
         ),
       );
     }
@@ -307,6 +187,7 @@ class _rdmState extends State<rdm> {
     }
 
     var aIndex = 0;
+
     final wsImages = [
       'assets/images/cineBg.png',
       'assets/images/csi.png',
@@ -504,83 +385,35 @@ class _rdmState extends State<rdm> {
                             onPressed: () {},
                           ),
                   ),
-                  Container(
-                    margin: EdgeInsets.only(top: mediaQuery.size.height * 0.1),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(32),
-                        bottomRight: Radius.circular(32),
-                      ),
-                      child: Container(
-                        alignment: Alignment.center,
-                        height: 50,
-                        width: 136,
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [HexColor('#79B6FC'), Colors.white],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            stops: [0.5, 1.8],
-                          ),
-                        ),
-                        child: Text(
-                          'Gallery',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Column(
-                    children: [
-                      CarouselSlider.builder(
-                        itemCount: wsImages.length,
-                        itemBuilder: (context, index, realIndex) {
-                          final wsImage = wsImages[index];
-                          return buildImage(wsImage, index);
-                        },
-                        options: CarouselOptions(
-                            height: 400,
-                            enlargeCenterPage: true,
-                            enableInfiniteScroll: false,
-                            enlargeStrategy: CenterPageEnlargeStrategy.height,
-                            onPageChanged: (index, reason) {
-                              setState(() {
-                                aIndex = index;
-                              });
-                            }),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      AnimatedSmoothIndicator(
-                        activeIndex: aIndex,
-                        count: wsImages.length,
-                        effect: WormEffect(),
-                      )
-                    ],
-                  ),
-                  SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        _leftHive(
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png'),
-                        _rightHive(
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png'),
-                        _leftHive(
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png'),
-                      ],
-                    ),
-                  ),
+                  // Column(
+                  //   children: [
+                  //     CarouselSlider.builder(
+                  //       itemCount: wsImages.length,
+                  //       itemBuilder: (context, index, realIndex) {
+                  //         final wsImage = wsImages[index];
+                  //         return buildImage(wsImage, index);
+                  //       },
+                  //       options: CarouselOptions(
+                  //           height: 400,
+                  //           enlargeCenterPage: true,
+                  //           enableInfiniteScroll: false,
+                  //           enlargeStrategy: CenterPageEnlargeStrategy.height,
+                  //           onPageChanged: (index, reason) {
+                  //             setState(() {
+                  //               aIndex = index;
+                  //             });
+                  //           }),
+                  //     ),
+                  //     // SizedBox(
+                  //     //   height: 20,
+                  //     // ),
+                  //     // AnimatedSmoothIndicator(
+                  //     //   activeIndex: aIndex,
+                  //     //   count: wsImages.length,
+                  //     //   effect: WormEffect(),
+                  //     // )
+                  //   ],
+                  // ),
                   Container(
                     margin: EdgeInsets.only(top: mediaQuery.size.height * 0.1),
                     child: ClipRRect(
@@ -690,11 +523,6 @@ class _rdmState extends State<rdm> {
                           'The Initative',
                           'assets/images/initiative.png',
                           'the_initiative',
-                        ),
-                        _events(
-                          'RDM',
-                          'assets/images/rdm.png',
-                          'rdm',
                         ),
                         _events(
                           'Vacanza',

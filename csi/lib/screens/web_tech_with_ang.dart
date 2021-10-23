@@ -1,5 +1,6 @@
-// ignore_for_file: camel_case_types, unnecessary_new, deprecated_member_use, prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables
+// ignore_for_file: camel_case_types, unnecessary_new, deprecated_member_use, prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, unused_local_variable
 
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -84,7 +85,9 @@ class _web_tech_with_angState extends State<web_tech_with_ang> {
                   ),
                   elevation: 5,
                   color: HexColor('#79B6FC'),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, route);
+                  },
                 ),
               )
             ],
@@ -93,126 +96,13 @@ class _web_tech_with_angState extends State<web_tech_with_ang> {
       );
     }
 
-    Widget _leftHive(String img1, String img2, String img3) {
-      return Container(
-        margin: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(3),
-                  ),
-                  child: ClipRRect(
-                    // borderRadius: BorderRadius.circular(80),
-                    child: Image(
-                      image: AssetImage(img1),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Image(
-                    image: AssetImage(img2),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  margin: const EdgeInsets.only(left: 60),
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Image(
-                    image: AssetImage(img3),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      );
-    }
-
-    Widget _rightHive(String img1, String img2, String img3) {
-      return Container(
-        margin: const EdgeInsets.all(20),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        // borderRadius: BorderRadius.circular(3),
-                      ),
-                      child: Image(
-                        image: AssetImage(img1),
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        // borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Image(
-                        image: AssetImage(img2),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.only(right: 60),
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        // borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Image(
-                        image: AssetImage(img3),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ],
-        ),
-      );
-    }
+    var aIndex = 0;
+    final wsImages = [
+      'assets/images/workshops/web1.jpg',
+      'assets/images/workshops/web2.jpg',
+      'assets/images/workshops/web3.jpg',
+      'assets/images/workshops/web4.jpg',
+    ];
 
     Widget _reviews(String review, String name, String branch) {
       return Container(
@@ -523,26 +413,25 @@ class _web_tech_with_angState extends State<web_tech_with_ang> {
                       ),
                     ),
                   ),
-                  SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        _leftHive(
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png'),
-                        _rightHive(
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png'),
-                        _leftHive(
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png',
-                            'assets/images/cineBg.png'),
-                      ],
-                    ),
+                  CarouselSlider.builder(
+                    itemCount: wsImages.length,
+                    itemBuilder: (context, index, realIndex) {
+                      final wImg = wsImages[index];
+                      return buildImage(wImg, index);
+                    },
+                    options: CarouselOptions(
+                        height: 400,
+                        enlargeCenterPage: true,
+                        enableInfiniteScroll: false,
+                        enlargeStrategy: CenterPageEnlargeStrategy.height,
+                        onPageChanged: (index, reason) {
+                          setState(() {
+                            aIndex = index;
+                          });
+                        }),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: mediaQuery.size.height * 0.1),
+                    // margin: EdgeInsets.only(top: mediaQuery.size.height * 0.1),
                     child: ClipRRect(
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(32),
@@ -662,11 +551,6 @@ class _web_tech_with_angState extends State<web_tech_with_ang> {
                           'web_dev',
                         ),
                         _workshop(
-                          'Web Tech With Angular',
-                          'assets/images/workshop.png',
-                          'web_tech_with_ang',
-                        ),
-                        _workshop(
                           'Blockchain',
                           'assets/images/workshop.png',
                           'blockchain',
@@ -687,4 +571,17 @@ class _web_tech_with_angState extends State<web_tech_with_ang> {
       ),
     );
   }
+}
+
+Widget buildImage(String wsImage, int index) {
+  return Container(
+    margin: const EdgeInsets.symmetric(horizontal: 20),
+    // color: Colors.grey,
+    child: Image(
+      image: AssetImage(
+        wsImage,
+      ),
+      fit: BoxFit.contain,
+    ),
+  );
 }

@@ -10,7 +10,7 @@ import 'package:google_fonts/google_fonts.dart';
 class ServiceDomain extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
-  Widget _cards(String title1, String para) {
+  Widget _cards(String title1, String para, String img) {
     return Container(
       decoration: BoxDecoration(
         color: HexColor('#E7F3FF'),
@@ -48,8 +48,8 @@ class ServiceDomain extends StatelessWidget {
                 margin: EdgeInsets.only(right: 10, bottom: 10),
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('assets/images/our feature page bg.png'),
-                    fit: BoxFit.fitHeight,
+                    image: AssetImage(img),
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -105,7 +105,7 @@ class ServiceDomain extends StatelessWidget {
     );
   }
 
-  Widget _cardsr(String title1, String para) {
+  Widget _cardsr(String title1, String para, String img) {
     return Container(
       height: 300,
       decoration: BoxDecoration(
@@ -166,17 +166,19 @@ class ServiceDomain extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
-                      margin: EdgeInsets.only(top: 26),
-                      child: Text(para,
-                          style: TextStyle(
-                            color: Colors.black.withOpacity(0.6),
-                            fontSize: 16,
-                            letterSpacing: 1.6,
-                            height: 1.4,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w400,
-                          )),
+                    Expanded(
+                      child: Container(
+                        margin: EdgeInsets.only(top: 26),
+                        child: Text(para,
+                            style: TextStyle(
+                              color: Colors.black.withOpacity(0.6),
+                              fontSize: 16,
+                              letterSpacing: 1.6,
+                              height: 1.4,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w400,
+                            )),
+                      ),
                     ),
                   ],
                 ),
@@ -189,8 +191,10 @@ class ServiceDomain extends StatelessWidget {
                 margin: EdgeInsets.only(right: 10, bottom: 10),
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('assets/images/our feature page bg.png'),
-                    fit: BoxFit.fitHeight,
+                    image: AssetImage(
+                      img,
+                    ),
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -215,11 +219,11 @@ class ServiceDomain extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(left: 10.0),
                 width: double.infinity,
-                //height: mediaQuery.size.height * 0.28,
+                height: mediaQuery.size.height * 0.28,
                 decoration: BoxDecoration(
                   color: HexColor('#E7F3FF'),
                   image: DecorationImage(
-                    image: AssetImage('assets/images/our feature page bg.png'),
+                    image: AssetImage('assets/images/service domains.png'),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -254,7 +258,7 @@ class ServiceDomain extends StatelessWidget {
                             ),
 
                             child: Text(
-                              'Service',
+                              '',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontFamily: 'Poppins',
@@ -271,7 +275,7 @@ class ServiceDomain extends StatelessWidget {
                             ),
 
                             child: Text(
-                              'Domains',
+                              '',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontFamily: 'Poppins',
@@ -340,12 +344,22 @@ class ServiceDomain extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
-                          _cards('Web-D',
-                              'We  and we create those platforms to put out their innovative ideas and beliefs, to create a better world.'),
-                          _cardsr('Android-D',
-                              'We at ing which enables others to  ideas and beliefs, to create a better world.'),
-                          _cards('Designing',
-                              'We at st, , to create a better world.'),
+                          _cards(
+                              'Web-D',
+                              'We  and we create those platforms to put out their innovative ideas and beliefs, to create a better world.',
+                              'assets/images/webDev.png'),
+                          _cardsr(
+                              'Android-D',
+                              'We at ing which enables others to  ideas and beliefs, to create a better world.',
+                              'assets/images/mobileDev.png'),
+                          _cards(
+                              'Designing',
+                              'We at st, , to create a better world.',
+                              'assets/images/graphicDev.png'),
+                          _cardsr(
+                              'Blockchain Technology',
+                              'We focus on fundamentals of Blockchain to establish a task and uses Blockchain Programming to perform various secured projects.',
+                              'assets/images/blockchainTech.png'),
                         ],
                       ),
                     )

@@ -1,4 +1,4 @@
-// ignore_for_file: file_names, prefer_const_constructors, use_key_in_widget_constructors, unnecessary_new
+// ignore_for_file: file_names, prefer_const_constructors, use_key_in_widget_constructors, unnecessary_new, unused_import, avoid_print
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:csi/widgets/InputField.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -7,11 +7,6 @@ import 'package:hexcolor/hexcolor.dart';
 import '../widgets/app_drawer.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-
-
-
-
-
 class RegistrationScreen extends StatefulWidget {
   @override
   _RegistrationScreenState createState() => _RegistrationScreenState();
@@ -19,34 +14,37 @@ class RegistrationScreen extends StatefulWidget {
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-  final Stream<QuerySnapshot> studentStream = FirebaseFirestore.instance.collection('students').snapshots();
+  final Stream<QuerySnapshot> studentStream =
+      FirebaseFirestore.instance.collection('students').snapshots();
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
-    return StreamBuilder<QuerySnapshot>(stream: studentStream,builder: (BuildContext context,AsyncSnapshot<QuerySnapshot> snapshot){
-      if(snapshot.hasError){
-        print("Somethingh went wrong");
-      }
-      if(snapshot.connectionState==ConnectionState.waiting){
-        return Center(
-          child: CircularProgressIndicator(),
-        );
-      }
+    return StreamBuilder<QuerySnapshot>(
+        stream: studentStream,
+        builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (snapshot.hasError) {
+            print("Somethingh went wrong");
+          }
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          }
 
-      final List storedocs = [];
-      snapshot.data!.docs.map((DocumentSnapshot document) {
-        Map a = document.data() as Map<String,dynamic>;
-        storedocs.add(a);
-      }).toList();
+          final List storedocs = [];
+          snapshot.data!.docs.map((DocumentSnapshot document) {
+            Map a = document.data() as Map<String, dynamic>;
+            storedocs.add(a);
+          }).toList();
 
-      return Scaffold(
-        backgroundColor: HexColor('#E7F3FF'),
-        key: _scaffoldKey,
-        drawer: AppDrawer(),
-        // appBar: AppBar(),
-        body: SafeArea(
-          child: SingleChildScrollView(
-              child: Column(
+          return Scaffold(
+            backgroundColor: HexColor('#E7F3FF'),
+            key: _scaffoldKey,
+            drawer: AppDrawer(),
+            // appBar: AppBar(),
+            body: SafeArea(
+              child: SingleChildScrollView(
+                  child: Column(
                 children: <Widget>[
                   Container(
                     margin: EdgeInsets.only(left: 10),
@@ -72,7 +70,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                               width: 18,
                               // color: Colors.black,
                             ),
-                            onPressed: () => _scaffoldKey.currentState!.openDrawer(),
+                            onPressed: () =>
+                                _scaffoldKey.currentState!.openDrawer(),
                           ),
                         ),
                         Container(
@@ -136,16 +135,16 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           width: mediaQuery.size.width * 0.7,
                           child: InputField(),
                         ),
-
                       ],
                     ),
                   ),
                 ],
               )),
-        ),
-      );
-    });
+            ),
+          );
+        });
 
+    // ignore: dead_code
     return Scaffold(
       backgroundColor: HexColor('#E7F3FF'),
       key: _scaffoldKey,
@@ -243,7 +242,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     width: mediaQuery.size.width * 0.7,
                     child: InputField(),
                   ),
-
                 ],
               ),
             ),
