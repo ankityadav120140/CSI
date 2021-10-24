@@ -102,7 +102,8 @@ class OurFeaturesScreen extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(left: 10),
               width: double.infinity,
-              height: mediaQuery.size.height * 0.28,
+              // height: mediaQuery.size.height * 0.30,
+
               decoration: BoxDecoration(
                 color: HexColor('#E7F3FF'),
                 image: DecorationImage(
