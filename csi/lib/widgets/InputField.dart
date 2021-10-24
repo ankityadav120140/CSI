@@ -58,15 +58,19 @@ clearText() {
     final mediaQuery = MediaQuery.of(context);
     return Form(
       key: _formkey,
+
       child: Column(
         children: <Widget>[
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+
             children: [
+
               RichText(
                   text: TextSpan(
                 text: "NAME",
                 style: TextStyle(
+
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                   color: Colors.blue,
@@ -75,9 +79,11 @@ clearText() {
               Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                    border: Border(bottom: BorderSide(color: Colors.grey))),
+                    border: Border(bottom: BorderSide(color: Colors.white))),
                 child: TextFormField(
+
                  controller: nameController,
+
                   validator: (value) {
                    if(value == null || value.isEmpty){
                      return 'please enter your name';
@@ -87,7 +93,7 @@ clearText() {
                   decoration: InputDecoration(
                       hintText: "Enter your name",
                       hintStyle: TextStyle(color: Colors.grey),
-                      border: InputBorder.none),
+                      ),
                 ),
               ),
             ],
@@ -109,8 +115,7 @@ clearText() {
               )),
               Container(
                 padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    border: Border(bottom: BorderSide(color: Colors.grey))),
+
                 child: TextFormField(
                   controller: branchContoller,
                   validator: (value) {
@@ -122,7 +127,7 @@ clearText() {
                   decoration: InputDecoration(
                     hintText: "Enter your Branch",
                     hintStyle: TextStyle(color: Colors.grey),
-                    border: InputBorder.none,
+
                   ),
                 ),
               ),
@@ -145,13 +150,16 @@ clearText() {
               )),
               Container(
                 padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    border: Border(bottom: BorderSide(color: Colors.grey))),
+
                 child: TextFormField(
                   keyboardType: TextInputType.number,
                   validator: (value){
                     if(value ==null || value.isEmpty){
                       return "Please enter your year";
+                    }else if(value.length!=1 ){
+                      return "Please enter correct year";
+                    }else if(value.contains('5') ||value.contains('6') ||value.contains('7')||value.contains('8')||value.contains('9')){
+                      return "Please enter correct year (From : 1,2,3,4)";
                     }
                     return null;
                   },
@@ -159,7 +167,7 @@ clearText() {
                   decoration: InputDecoration(
                       hintText: "Enter your Year",
                       hintStyle: TextStyle(color: Colors.grey),
-                      border: InputBorder.none),
+                      ),
                 ),
               ),
             ],
@@ -181,8 +189,7 @@ clearText() {
               )),
               Container(
                 padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    border: Border(bottom: BorderSide(color: Colors.grey))),
+
                 child: TextFormField(
                   keyboardType: TextInputType.emailAddress,
                   controller: emailController,
@@ -190,15 +197,15 @@ clearText() {
                           if(value ==null || value.isEmpty){
                               return 'Please enter your email';
                              }
-                          else if(!value.contains('@')){
-                            return 'Please Enter valid email';
+                          else if(!value.contains('@akgec.ac.in')){
+                            return 'Please your college email';
                             }
                           return null;
                        },
                   decoration: InputDecoration(
                       hintText: "Enter your Email",
                       hintStyle: TextStyle(color: Colors.grey),
-                      border: InputBorder.none),
+                     ),
                 ),
               ),
             ],
@@ -220,8 +227,7 @@ clearText() {
               )),
               Container(
                 padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    border: Border(bottom: BorderSide(color: Colors.grey))),
+
                 child: TextFormField(
                   controller: phoneController,
                   validator: (value) {
@@ -237,7 +243,7 @@ clearText() {
                   decoration: InputDecoration(
                     hintText: "Enter your Phone No.",
                     hintStyle: TextStyle(color: Colors.grey),
-                    border: InputBorder.none,
+
                   ),
                 ),
               ),
