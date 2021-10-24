@@ -10,8 +10,9 @@ import 'package:google_fonts/google_fonts.dart';
 class ServiceDomain extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
-  Widget _cards(String title1, String para) {
+  Widget _cards(String title1, String para, String img) {
     return Container(
+      // height: 300,
       decoration: BoxDecoration(
         color: HexColor('#E7F3FF'),
         borderRadius: BorderRadius.circular(40),
@@ -37,74 +38,71 @@ class ServiceDomain extends StatelessWidget {
         top: 27,
         left: 2,
         right: 2,
+        bottom: 30,
       ),
-      child: Expanded(
-        child: Row(
-          children: <Widget>[
-            Expanded(
-              child: Container(
-                width: 130,
-                height: 250,
-                margin: EdgeInsets.only(right: 10, bottom: 10),
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/images/our feature page bg.png'),
-                    fit: BoxFit.fitHeight,
+      child: Row(
+        children: <Widget>[
+          Container(
+            width: 130,
+            height: 250,
+            margin: EdgeInsets.only(right: 10, bottom: 10),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  img,
+                ),
+                fit: BoxFit.contain,
+              ),
+            ),
+          ),
+          Container(
+            // height: 275,
+            width: 185,
+            margin: EdgeInsets.only(left: 10, right: 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.only(bottom: 10),
+                  child: Text(
+                    title1,
+                    style: GoogleFonts.poppins(
+                        color: Colors.black,
+                        fontSize: 30,
+                        height: 1,
+                        fontWeight: FontWeight.w500),
+                    // style: TextStyle(
+                    //   color: Colors.black,
+                    //   fontSize: 35,
+                    //   fontFamily: 'PlayfairDisplay',
+                    //   fontWeight: FontWeight.w500,
+
+                    // ),
                   ),
                 ),
-              ),
-            ),
-            Expanded(
-              child: Container(
-                height: 275,
-                width: 185,
-                margin: EdgeInsets.only(left: 10, right: 10),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.only(bottom: 10),
-                      child: Text(
-                        title1,
-                        style: GoogleFonts.poppins(
-                            color: Colors.black,
-                            fontSize: 30,
-                            height: 1,
-                            fontWeight: FontWeight.w500),
-                        // style: TextStyle(
-                        //   color: Colors.black,
-                        //   fontSize: 35,
-                        //   fontFamily: 'PlayfairDisplay',
-                        //   fontWeight: FontWeight.w500,
-
-                        // ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 26),
-                      child: Text(para,
-                          style: TextStyle(
-                            color: Colors.black.withOpacity(0.6),
-                            fontSize: 16,
-                            letterSpacing: 1.6,
-                            height: 1.4,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w400,
-                          )),
-                    ),
-                  ],
+                Container(
+                  margin: EdgeInsets.only(top: 26),
+                  child: Text(para,
+                      style: TextStyle(
+                        color: Colors.black.withOpacity(0.6),
+                        fontSize: 16,
+                        letterSpacing: 1.6,
+                        height: 1.4,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w400,
+                      )),
                 ),
-              ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
 
-  Widget _cardsr(String title1, String para) {
+  Widget _cardsr(String title1, String para, String img) {
     return Container(
-      height: 300,
+      // height: 300,
       decoration: BoxDecoration(
         color: HexColor('#E7F3FF'),
         borderRadius: BorderRadius.circular(40),
@@ -130,67 +128,64 @@ class ServiceDomain extends StatelessWidget {
         top: 27,
         left: 2,
         right: 2,
+        bottom: 30,
       ),
-      child: Expanded(
-        child: Row(
-          children: <Widget>[
-            Expanded(
-              child: Container(
-                height: 275,
-                width: 185,
-                margin: EdgeInsets.only(left: 10, right: 10),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.only(bottom: 10),
-                      child: Text(
-                        title1,
-                        style: GoogleFonts.poppins(
-                            color: Colors.black,
-                            fontSize: 30,
-                            height: 1,
-                            fontWeight: FontWeight.w500),
-                        // style: TextStyle(
-                        //   color: Colors.black,
-                        //   fontSize: 35,
-                        //   fontFamily: 'PlayfairDisplay',
-                        //   fontWeight: FontWeight.w500,
+      child: Row(
+        children: <Widget>[
+          Container(
+            // height: 275,
+            width: 185,
+            margin: EdgeInsets.only(left: 10, right: 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.only(bottom: 10),
+                  child: Text(
+                    title1,
+                    style: GoogleFonts.poppins(
+                        color: Colors.black,
+                        fontSize: 30,
+                        height: 1,
+                        fontWeight: FontWeight.w500),
+                    // style: TextStyle(
+                    //   color: Colors.black,
+                    //   fontSize: 35,
+                    //   fontFamily: 'PlayfairDisplay',
+                    //   fontWeight: FontWeight.w500,
 
-                        // ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 26),
-                      child: Text(para,
-                          style: TextStyle(
-                            color: Colors.black.withOpacity(0.6),
-                            fontSize: 16,
-                            letterSpacing: 1.6,
-                            height: 1.4,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w400,
-                          )),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              child: Container(
-                width: 130,
-                height: 250,
-                margin: EdgeInsets.only(right: 10, bottom: 10),
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/images/our feature page bg.png'),
-                    fit: BoxFit.fitHeight,
+                    // ),
                   ),
                 ),
+                Container(
+                  margin: EdgeInsets.only(top: 26),
+                  child: Text(para,
+                      style: TextStyle(
+                        color: Colors.black.withOpacity(0.6),
+                        fontSize: 16,
+                        letterSpacing: 1.6,
+                        height: 1.4,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w400,
+                      )),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: 130,
+            height: 250,
+            margin: EdgeInsets.only(right: 10, bottom: 10),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  img,
+                ),
+                fit: BoxFit.contain,
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -209,11 +204,11 @@ class ServiceDomain extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(left: 10.0),
                 width: double.infinity,
-                //height: mediaQuery.size.height * 0.28,
+                height: 300,
                 decoration: BoxDecoration(
                   color: HexColor('#E7F3FF'),
                   image: DecorationImage(
-                    image: AssetImage('assets/images/our feature page bg.png'),
+                    image: AssetImage('assets/images/service domains.png'),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -248,7 +243,7 @@ class ServiceDomain extends StatelessWidget {
                             ),
 
                             child: Text(
-                              'Service',
+                              '',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontFamily: 'Poppins',
@@ -265,7 +260,7 @@ class ServiceDomain extends StatelessWidget {
                             ),
 
                             child: Text(
-                              'Domains',
+                              '',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontFamily: 'Poppins',
@@ -334,12 +329,22 @@ class ServiceDomain extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
-                          _cards('Web-D',
-                              'We  and we create those platforms to put out their innovative ideas and beliefs, to create a better world.'),
-                          _cardsr('Android-D',
-                              'We at ing which enables others to  ideas and beliefs, to create a better world.'),
-                          _cards('Designing',
-                              'We at st, , to create a better world.'),
+                          _cards(
+                              'Web-D',
+                              'We are the trendsetters in web development. Our team makes use of the latest design principles and technologies to develop content and websites that can empower people, and help them achieve perfection.',
+                              'assets/images/webDev.png'),
+                          _cardsr(
+                              'Android-D',
+                              'Our team has that edge, which makes us the leaders in application development. We live, to turn ideas full of potential into hardcore code leading to beautiful and efficient mobile applications.',
+                              'assets/images/mobileDev.png'),
+                          _cards(
+                              'Designing',
+                              'We, at CSI, have a team full of innovators and original thinkers imbued with the ability to turn the imaginations into a visually pleasing vista of creativity.',
+                              'assets/images/graphicDev.png'),
+                          _cardsr(
+                              'Blockchain Technology',
+                              'We develop and work on the Blockchain technology. Our team focus on basic fundamentals of Blockchain to establish a task and uses Blockchain Programming to perform various secured projects.',
+                              'assets/images/blockchainTech.png'),
                         ],
                       ),
                     )

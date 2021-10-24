@@ -67,7 +67,7 @@ class FourthYearScreen extends StatelessWidget {
                               left: mediaQuery.size.height * 0.02,
                             ),
                             child: Text(
-                              'Our',
+                              '',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontFamily: 'Poppins',
@@ -84,7 +84,7 @@ class FourthYearScreen extends StatelessWidget {
                             ),
 
                             child: Text(
-                              'Team',
+                              '',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontFamily: 'Poppins',
@@ -120,6 +120,19 @@ class FourthYearScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(
+                        left: mediaQuery.size.height * 0.03,
+                        bottom: mediaQuery.size.height * 0.03,
+                      ),
+                      child: Text(
+                        'Our Team',
+                        style: TextStyle(
+                            fontSize: 35,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w400),
+                      ),
+                    ),
                     Container(
                       margin: EdgeInsets.only(bottom: 20),
                       child: ClipRRect(

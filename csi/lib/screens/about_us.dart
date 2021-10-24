@@ -30,15 +30,12 @@ class _aboutUsState extends State<aboutUs> {
             Container(
               margin: EdgeInsets.only(left: 10),
               width: double.infinity,
-              // height: mediaQuery.size.height * 0.28,
+              height: 300,
               decoration: BoxDecoration(
                 color: HexColor('#E7F3FF'),
                 image: DecorationImage(
-                  image: AssetImage('assets/images/csi.png'),
-                  // colorFilter: ColorFilter(
-
-                  // ),
-                  fit: BoxFit.cover,
+                  image: AssetImage('assets/images/csi_logo.png'),
+                  fit: BoxFit.contain,
                 ),
               ),
               child: Column(
@@ -83,13 +80,22 @@ class _aboutUsState extends State<aboutUs> {
               ),
             ),
             Container(
+              margin: EdgeInsets.only(
+                top: 10,
+              ),
               padding: EdgeInsets.only(
                 top: mediaQuery.size.height * 0.05,
                 bottom: mediaQuery.size.height * 0.09,
               ),
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Colors.white,
+                gradient: LinearGradient(
+                  colors: [HexColor('#7CA6F0'), HexColor('#BFD4F9')],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  stops: [0.5, 1.8],
+                ),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(32),
                   topRight: Radius.circular(32),
@@ -111,7 +117,7 @@ class _aboutUsState extends State<aboutUs> {
                         width: 250,
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
-                            colors: [HexColor('#79B6FC'), Colors.white],
+                            colors: [Colors.blue.shade900, HexColor('#79B6FC')],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                             // ignore: prefer_const_literals_to_create_immutables
@@ -137,9 +143,10 @@ class _aboutUsState extends State<aboutUs> {
                     child: Text(
                       'Team CSI',
                       style: TextStyle(
+                          color: Colors.white,
                           fontSize: 35,
                           fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w400),
+                          fontWeight: FontWeight.w600),
                     ),
                   ),
                   Container(
@@ -152,6 +159,7 @@ class _aboutUsState extends State<aboutUs> {
                     child: Text(
                       'The COMPUTER SOCIETY OF INDIA (acronym as CSI) was formed in the year 1965. Since its inception, CSI has been paving the way for the IT industry to advance in the right direction. By indulging within itself most famous IT leaders, brilliant scientists and dedicated academicians, CSI has been highly successful in setting highest benchmarks in the field of professional competence with high quality commitment.It has set up a remarkable example by providing high range of services and networking opportunities through workshops, seminars, conventions and courses in which major faces of the industry have actively participated and exchanged valuable knowledge and ideas. Today CSI has 71 chapters, 418 student branches and more than 90000 registered members.The statistics speak all about the importance of CSI in the countrys most fashionable IT industry.',
                       style: TextStyle(
+                        color: Colors.white,
                         height: 1.3,
                         letterSpacing: 1.5,
                         fontSize: 18,
@@ -170,6 +178,7 @@ class _aboutUsState extends State<aboutUs> {
                     child: Text(
                       'C.S.I. in A.K.G.E.C. Since CSI student chapter has evolved in AKGEC, it has been one of the most active societies of the institute by organising events and workshops which have proven to be blockbusters in the college. The active image of the society becomes more prominent during the annual national level event, The Initiative, wherein the society asks students to provide solutions to the burning issues our country is facing. CSI AKGEC Chapter is known for its highly skilled team members, and the efficiency & quality of the events and workshops that it conducts. Recently Team CSI conducted Java and Android workshop, Ethical Hacking workshop which saw immense participation among the students! Another blockbuster event of CSI AKGEC chapter includes the online gaming event Route De Moksha which has always proven to be the best event conducted in the College tech fest.Though not being organised since a couple years, lets hope the famous RDM will make a return soon enough! The incredible efforts put in by the student members of the society always earn significant admiration.',
                       style: TextStyle(
+                        color: Colors.white,
                         height: 1.3,
                         letterSpacing: 1.5,
                         fontSize: 18,

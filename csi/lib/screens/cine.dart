@@ -1,10 +1,12 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, unnecessary_new, use_key_in_widget_constructors, camel_case_types, deprecated_member_use, dead_code
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, unnecessary_new, use_key_in_widget_constructors, camel_case_types, deprecated_member_use, dead_code, unused_import, import_of_legacy_library_into_null_safe
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hexagon/hexagon.dart';
 import 'package:hexcolor/hexcolor.dart';
 import '../widgets/app_drawer.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:xml/xml_events.dart';
 
 class cine extends StatefulWidget {
   const cine({Key? key}) : super(key: key);
@@ -19,198 +21,22 @@ class _cineState extends State<cine> {
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
     bool reg = true;
-    Widget _leftHive(String img1, String img2, String img3) {
-      return Container(
-        margin: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    // borderRadius: BorderRadius.circular(3),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 10,
-                        // spreadRadius: 5,
-                        offset: Offset(
-                          8,
-                          8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  child: ClipRRect(
-                    // borderRadius: BorderRadius.circular(80),
-                    child: Image(
-                      image: AssetImage(img1),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 10,
-                        // spreadRadius: 5,
-                        offset: Offset(
-                          8,
-                          8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  child: Image(
-                    image: AssetImage(img2),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  margin: const EdgeInsets.only(left: 60),
-                  padding: const EdgeInsets.all(5),
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 10,
-                        // spreadRadius: 5,
-                        offset: Offset(
-                          8,
-                          8,
-                        ),
-                      ),
-                    ],
-                  ),
-                  child: Image(
-                    image: AssetImage(img3),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      );
-    }
 
-    Widget _rigthHive(String img1, String img2, String img3) {
-      return Container(
-        margin: const EdgeInsets.all(20),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        // borderRadius: BorderRadius.circular(3),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black12,
-                            blurRadius: 10,
-                            // spreadRadius: 5,
-                            offset: Offset(
-                              8,
-                              8,
-                            ),
-                          ),
-                        ],
-                      ),
-                      child: Image(
-                        image: AssetImage(img1),
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black12,
-                            blurRadius: 10,
-                            // spreadRadius: 5,
-                            offset: Offset(
-                              8,
-                              8,
-                            ),
-                          ),
-                        ],
-                      ),
-                      child: Image(
-                        image: AssetImage(img2),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.only(right: 60),
-                      padding: const EdgeInsets.all(5),
-                      height: 120,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black12,
-                            blurRadius: 10,
-                            // spreadRadius: 5,
-                            offset: Offset(
-                              8,
-                              8,
-                            ),
-                          ),
-                        ],
-                      ),
-                      child: Image(
-                        image: AssetImage(img3),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ],
-        ),
-      );
-    }
-
-    Widget _events(String name, String path) {
+    Widget _events(String name, String path, String route) {
       return GestureDetector(
-        onTap: () {},
+        onTap: () {
+          Navigator.pushNamed(context, route);
+        },
         child: Container(
           margin: EdgeInsets.only(top: 50, bottom: 50),
           child: Column(
             children: [
               Container(
                 height: 200,
+                width: 280,
                 decoration: BoxDecoration(
-                  // borderRadius: BorderRadius.circular(3),
+                  borderRadius: BorderRadius.circular(30),
+                  color: Colors.white,
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black12,
@@ -226,7 +52,7 @@ class _cineState extends State<cine> {
                 margin: EdgeInsets.only(
                   top: 40,
                   left: 20,
-                  bottom: 40,
+                  bottom: 20,
                   right: 20,
                 ),
                 padding: EdgeInsets.only(
@@ -259,7 +85,9 @@ class _cineState extends State<cine> {
                   ),
                   elevation: 5,
                   color: HexColor('#79B6FC'),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, route);
+                  },
                 ),
               )
             ],
@@ -268,13 +96,140 @@ class _cineState extends State<cine> {
       );
     }
 
+    // Widget _leftHive(String img1, String img2, String img3) {
+    //   return Container(
+    //     margin: const EdgeInsets.only(left: 20, top: 20),
+    //     child: Column(
+    //       children: [
+    //         Row(
+    //           children: [
+    //             Container(
+    //               margin: const EdgeInsets.only(left: 10),
+    //               child: HexagonWidget.pointy(
+    //                 width: 130,
+    //                 elevation: 8,
+    //                 child: Container(
+    //                   child: Image(
+    //                     image: AssetImage(
+    //                       img2,
+    //                     ),
+    //                   ),
+    //                 ),
+    //               ),
+    //             ),
+    //             Container(
+    //               margin: const EdgeInsets.only(left: 10),
+    //               child: HexagonWidget.pointy(
+    //                 width: 130,
+    //                 elevation: 8,
+    //                 child: Container(
+    //                   child: Image(
+    //                     image: AssetImage(
+    //                       img1,
+    //                     ),
+    //                   ),
+    //                 ),
+    //               ),
+    //             ),
+    //           ],
+    //         ),
+    //         Row(
+    //           mainAxisAlignment: MainAxisAlignment.start,
+    //           children: [
+    //             Container(
+    //               margin: const EdgeInsets.only(left: 40),
+    //               child: HexagonWidget.pointy(
+    //                 width: 200,
+    //                 elevation: 8,
+    //                 child: Container(
+    //                   child: Image(
+    //                     image: AssetImage(
+    //                       img3,
+    //                     ),
+    //                   ),
+    //                 ),
+    //               ),
+    //             ),
+    //           ],
+    //         ),
+    //       ],
+    //     ),
+    //   );
+    // }
+
+    // Widget _rightHive(String img1, String img2, String img3) {
+    //   return Container(
+    //     margin: const EdgeInsets.only(right: 20, top: 20),
+    //     child: Row(
+    //       mainAxisAlignment: MainAxisAlignment.end,
+    //       children: [
+    //         Column(
+    //           crossAxisAlignment: CrossAxisAlignment.end,
+    //           children: [
+    //             Row(
+    //               children: [
+    //                 Container(
+    //                   margin: const EdgeInsets.only(right: 10),
+    //                   child: HexagonWidget.pointy(
+    //                     width: 130,
+    //                     elevation: 8,
+    //                     child: Container(
+    //                       child: Image(
+    //                         image: AssetImage(
+    //                           img1,
+    //                         ),
+    //                       ),
+    //                     ),
+    //                   ),
+    //                 ),
+    //                 Container(
+    //                   margin: const EdgeInsets.only(right: 10),
+    //                   child: HexagonWidget.pointy(
+    //                     width: 130,
+    //                     elevation: 8,
+    //                     child: Container(
+    //                       child: Image(
+    //                         image: AssetImage(
+    //                           img2,
+    //                         ),
+    //                       ),
+    //                     ),
+    //                   ),
+    //                 ),
+    //               ],
+    //             ),
+    //             Row(
+    //               mainAxisAlignment: MainAxisAlignment.start,
+    //               children: [
+    //                 Container(
+    //                   margin: const EdgeInsets.only(right: 40),
+    //                   child: HexagonWidget.pointy(
+    //                     width: 200,
+    //                     elevation: 8,
+    //                     child: Container(
+    //                       child: Image(
+    //                         image: AssetImage(
+    //                           img3,
+    //                         ),
+    //                       ),
+    //                     ),
+    //                   ),
+    //                 ),
+    //               ],
+    //             ),
+    //           ],
+    //         ),
+    //       ],
+    //     ),
+    //   );
+    // }
+
     Widget _reviews(String review, String name, String branch) {
       return Container(
         height: 200,
         width: double.infinity,
         decoration: BoxDecoration(
           color: HexColor('#ffffff'),
-          borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
               color: Colors.black12,
@@ -286,6 +241,7 @@ class _cineState extends State<cine> {
               ),
             ),
           ],
+          borderRadius: BorderRadius.circular(20),
         ),
         margin: EdgeInsets.only(
           top: 40,
@@ -549,55 +505,56 @@ class _cineState extends State<cine> {
                               onPressed: () {},
                             ),
                     ),
-                    Container(
-                      margin:
-                          EdgeInsets.only(top: mediaQuery.size.height * 0.1),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(32),
-                          bottomRight: Radius.circular(32),
-                        ),
-                        child: Container(
-                          alignment: Alignment.center,
-                          height: 50,
-                          width: 136,
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [HexColor('#79B6FC'), Colors.white],
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                              stops: [0.5, 1.8],
-                            ),
-                          ),
-                          child: Text(
-                            'Gallery',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w500),
-                          ),
-                        ),
-                      ),
-                    ),
-                    SingleChildScrollView(
-                      child: Column(
-                        children: [
-                          _leftHive(
-                              '"assets/images/cineBg.png"',
-                              '"assets/images/cineBg.png"',
-                              '"assets/images/cineBg.png"'),
-                          _rigthHive(
-                              '"assets/images/cineBg.png"',
-                              '"assets/images/cineBg.png"',
-                              '"assets/images/cineBg.png"'),
-                          _leftHive(
-                              '"assets/images/cineBg.png"',
-                              '"assets/images/cineBg.png"',
-                              '"assets/images/cineBg.png"'),
-                        ],
-                      ),
-                    ),
+                    // Container(
+                    //   margin:
+                    //       EdgeInsets.only(top: mediaQuery.size.height * 0.1),
+                    //   child: ClipRRect(
+                    //     borderRadius: BorderRadius.only(
+                    //       topRight: Radius.circular(32),
+                    //       bottomRight: Radius.circular(32),
+                    //     ),
+                    //     child: Container(
+                    //       alignment: Alignment.center,
+                    //       height: 50,
+                    //       width: 136,
+                    //       decoration: BoxDecoration(
+                    //         gradient: LinearGradient(
+                    //           colors: [HexColor('#79B6FC'), Colors.white],
+                    //           begin: Alignment.topLeft,
+                    //           end: Alignment.bottomRight,
+                    //           stops: [0.5, 1.8],
+                    //         ),
+                    //       ),
+                    //       child: Text(
+                    //         'Gallery',
+                    //         style: TextStyle(
+                    //             color: Colors.white,
+                    //             fontSize: 16,
+                    //             fontFamily: 'Poppins',
+                    //             fontWeight: FontWeight.w500),
+                    //       ),
+                    //     ),
+                    //   ),
+                    // ),
+                    // SingleChildScrollView(
+                    //   child: Column(
+                    //     children: [
+                    //       _leftHive(
+                    //           'assets/images/cineBg.png',
+                    //           'assets/images/cineBg.png',
+                    //           'assets/images/cineBg.png'),
+                    //       _rightHive(
+                    //           'assets/images/cineBg.png',
+                    //           'assets/images/cineBg.png',
+                    //           'assets/images/cineBg.png'),
+                    //       _leftHive(
+                    //           'assets/images/cineBg.png',
+                    //           'assets/images/cineBg.png',
+                    //           'assets/images/cineBg.png'),
+                    //     ],
+                    //   ),
+                    // ),
+
                     Container(
                       margin:
                           EdgeInsets.only(top: mediaQuery.size.height * 0.1),
@@ -701,20 +658,19 @@ class _cineState extends State<cine> {
                       child: Row(
                         children: <Widget>[
                           _events(
-                            'cine',
-                            '"assets/images/cineBg.png"',
-                          ),
-                          _events(
                             'The Initative',
-                            '"assets/images/cineBg.png"',
+                            'assets/images/initiative.png',
+                            'the_initiative',
                           ),
                           _events(
                             'RDM',
-                            '"assets/images/cineBg.png"',
+                            'assets/images/rdm.png',
+                            'rdm',
                           ),
                           _events(
                             'Vacanza',
-                            '"assets/images/cineBg.png"',
+                            'assets/images/vacanza.png',
+                            'vacanza',
                           ),
                         ],
                       ),

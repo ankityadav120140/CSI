@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
@@ -11,12 +13,12 @@ class NewIndividual extends StatelessWidget {
   final String imageUrl;
 
   const NewIndividual(
-      this.name,
-      this.imageUrl,
-      this.facebookUrl,
-      this.githubUrl,
-      this.linkedinUrl,
-      );
+    this.name,
+    this.imageUrl,
+    this.facebookUrl,
+    this.githubUrl,
+    this.linkedinUrl,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -34,89 +36,89 @@ class NewIndividual extends StatelessWidget {
 
     return InkWell(
         child: Stack(
+      children: <Widget>[
+        Column(
           children: <Widget>[
-            Column(
-              children: <Widget>[
-                Expanded(
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(32),
-                    child: Image.asset(
-                      imageUrl,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Colors.transparent,
-                    Colors.black26,
-                    Colors.black87,
-                  ],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                ),
+            Expanded(
+              child: ClipRRect(
                 borderRadius: BorderRadius.circular(32),
+                child: Image.asset(
+                  imageUrl,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                Container(
-                  // color: Colors.amber,
-                  child: Text(
-                    name,
-                    style: TextStyle(
-                        fontFamily: 'Poppins',
-                        color: Colors.white,
-                        fontSize: 18,
-                        height: 1),
-                  ),
-                ),
-                Container(
-                  // color: Colors.blueGrey,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      IconButton(
-                        iconSize: 18,
-                        constraints: BoxConstraints(
-                          minWidth: 20,
-                          minHeight: 20,
-                        ),
-                        icon: SvgPicture.asset('assets/icons/instagram.svg',
-                            color: Colors.white),
-                        onPressed: _launchURLF,
-                      ),
-                      IconButton(
-                        iconSize: 18,
-                        constraints: BoxConstraints(
-                          minWidth: 20,
-                          minHeight: 20,
-                        ),
-                        icon: SvgPicture.asset('assets/icons/github-image.svg',
-                            color: Colors.white),
-                        onPressed: _launchURLG,
-                      ),
-                      IconButton(
-                        iconSize: 18,
-                        constraints: BoxConstraints(
-                          minWidth: 20,
-                          minHeight: 20,
-                        ),
-                        icon: SvgPicture.asset('assets/icons/linkedin.svg',
-                            color: Colors.white),
-                        onPressed: _launchURLL,
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            ),
           ],
-        ));
+        ),
+        Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Colors.transparent,
+                Colors.black26,
+                Colors.black87,
+              ],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+            borderRadius: BorderRadius.circular(32),
+          ),
+        ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            Container(
+              // color: Colors.amber,
+              child: Text(
+                name,
+                style: TextStyle(
+                    fontFamily: 'Poppins',
+                    color: Colors.white,
+                    fontSize: 18,
+                    height: 1),
+              ),
+            ),
+            Container(
+              // color: Colors.blueGrey,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  IconButton(
+                    iconSize: 18,
+                    constraints: BoxConstraints(
+                      minWidth: 20,
+                      minHeight: 20,
+                    ),
+                    icon: SvgPicture.asset('assets/icons/instagram.svg',
+                        color: Colors.white),
+                    onPressed: _launchURLF,
+                  ),
+                  IconButton(
+                    iconSize: 18,
+                    constraints: BoxConstraints(
+                      minWidth: 20,
+                      minHeight: 20,
+                    ),
+                    icon: SvgPicture.asset('assets/icons/github-image.svg',
+                        color: Colors.white),
+                    onPressed: _launchURLG,
+                  ),
+                  IconButton(
+                    iconSize: 18,
+                    constraints: BoxConstraints(
+                      minWidth: 20,
+                      minHeight: 20,
+                    ),
+                    icon: SvgPicture.asset('assets/icons/linkedin.svg',
+                        color: Colors.white),
+                    onPressed: _launchURLL,
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
+      ],
+    ));
   }
 }

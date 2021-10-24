@@ -1,50 +1,54 @@
-// ignore_for_file: file_names, prefer_const_constructors, use_key_in_widget_constructors
+// ignore_for_file: file_names, prefer_const_constructors, use_key_in_widget_constructors, avoid_print, override_on_non_overriding_member
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 final userRef = FirebaseFirestore.instance.collection('users');
+
 class InputField extends StatefulWidget {
   @override
   _InputFieldState createState() => _InputFieldState();
 }
 
 class _InputFieldState extends State<InputField> {
-  var name="";
-  var email="";
-  var branch="";
-  var phone="";
-  var year="";
+  var name = "";
+  var email = "";
+  var branch = "";
+  var phone = "";
+  var year = "";
 
-  final _formkey =GlobalKey<FormState>();
-  final nameController =TextEditingController();
+  final _formkey = GlobalKey<FormState>();
+  final nameController = TextEditingController();
   final emailController = TextEditingController();
   final branchContoller = TextEditingController();
   final yearController = TextEditingController();
   final phoneController = TextEditingController();
 
-@override
+  @override
+  CollectionReference students =
+      FirebaseFirestore.instance.collection('students');
+  Future<void> addUser() {
+    return students
+        .add({
+          'name': name,
+          'email': email,
+          'phone No': phone,
+          'branch': branch,
+          'year': year,
+        })
+        .then((value) => print("user added"))
+        .catchError((error) => print('Failed to add user:$error'));
+  }
 
-CollectionReference students = FirebaseFirestore.instance.collection('students');
-Future<void>addUser(){
-  return students.add({
-    'name':name,
-    'email':email,
-    'phone No':phone,
-    'branch': branch,
-    'year': year,
-  }).then((value) => print("user added")).catchError((error) => print('Failed to add user:$error'));
-}
+  clearText() {
+    nameController.clear();
+    emailController.clear();
+    branchContoller.clear();
+    phoneController.clear();
+    yearController.clear();
+  }
 
-clearText() {
-  nameController.clear();
-  emailController.clear();
-  branchContoller.clear();
-  phoneController.clear();
-  yearController.clear();
-}
-
-  void dipose(){
+  void dipose() {
     nameController.dispose();
     emailController.dispose();
     branchContoller.dispose();
@@ -53,7 +57,6 @@ clearText() {
   }
 
   @override
-
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
     return Form(
@@ -85,10 +88,10 @@ clearText() {
                  controller: nameController,
 
                   validator: (value) {
-                   if(value == null || value.isEmpty){
-                     return 'please enter your name';
-                   }
-                   return null;
+                    if (value == null || value.isEmpty) {
+                      return 'please enter your name';
+                    }
+                    return null;
                   },
                   decoration: InputDecoration(
                       hintText: "Enter your name",
@@ -119,11 +122,11 @@ clearText() {
                 child: TextFormField(
                   controller: branchContoller,
                   validator: (value) {
-                         if(value == null || value.isEmpty){
-                             return 'please enter your branch';
-                          }
-                      return null;
-                      },
+                    if (value == null || value.isEmpty) {
+                      return 'please enter your branch';
+                    }
+                    return null;
+                  },
                   decoration: InputDecoration(
                     hintText: "Enter your Branch",
                     hintStyle: TextStyle(color: Colors.grey),
@@ -153,8 +156,8 @@ clearText() {
 
                 child: TextFormField(
                   keyboardType: TextInputType.number,
-                  validator: (value){
-                    if(value ==null || value.isEmpty){
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
                       return "Please enter your year";
                     }else if(value.length!=1 ){
                       return "Please enter correct year";
@@ -202,6 +205,7 @@ clearText() {
                             }
                           return null;
                        },
+
                   decoration: InputDecoration(
                       hintText: "Enter your Email",
                       hintStyle: TextStyle(color: Colors.grey),
@@ -231,10 +235,9 @@ clearText() {
                 child: TextFormField(
                   controller: phoneController,
                   validator: (value) {
-                    if(value == null || value.isEmpty){
+                    if (value == null || value.isEmpty) {
                       return 'please enter your phone number';
-                    }
-                    else if(value.length!=10){
+                    } else if (value.length != 10) {
                       return 'please enter 10 digit phone no.';
                     }
                     return null;
@@ -247,7 +250,6 @@ clearText() {
                   ),
                 ),
               ),
-
               Container(
                 margin: EdgeInsets.only(
                   left: mediaQuery.size.height * 0.03,
@@ -255,43 +257,39 @@ clearText() {
                 ),
                 // ignore: deprecated_member_use
                 child: RaisedButton(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 18,
-                      horizontal: 15,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 18,
+                        horizontal: 15,
+                      ),
+                      child: Text(
+                        'Register',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w500),
+                      ),
                     ),
-                    child: Text(
-                      'Register',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w500),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
                     ),
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32),
-                  ),
-                  elevation: 5,
-                  color: HexColor('#79B6FC'),
-                  onPressed: () {
-                    if(_formkey.currentState!.validate()){
-                      setState(() {
-                        name=nameController.text;
-                        email=emailController.text;
-                        year=yearController.text;
-                        branch=branchContoller.text;
-                        phone=phoneController.text;
+                    elevation: 5,
+                    color: HexColor('#79B6FC'),
+                    onPressed: () {
+                      if (_formkey.currentState!.validate()) {
+                        setState(() {
+                          name = nameController.text;
+                          email = emailController.text;
+                          year = yearController.text;
+                          branch = branchContoller.text;
+                          phone = phoneController.text;
 
-
-                        addUser();
-                        clearText();
-
-
-                      });
-                    }
-                  }
-                ),
+                          addUser();
+                          clearText();
+                        });
+                      }
+                    }),
               ),
             ],
           ),

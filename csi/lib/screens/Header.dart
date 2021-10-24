@@ -21,7 +21,7 @@ class Header extends StatelessWidget {
           ),
           Center(
             child: Text(
-              "Welcome to Inside Android",
+              "Welcome!",
               style: TextStyle(color: Colors.white, fontSize: 18),
             ),
           )

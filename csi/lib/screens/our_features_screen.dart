@@ -102,7 +102,8 @@ class OurFeaturesScreen extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(left: 10),
               width: double.infinity,
-              // height: mediaQuery.size.height * 0.28,
+              // height: mediaQuery.size.height * 0.30,
+
               decoration: BoxDecoration(
                 color: HexColor('#E7F3FF'),
                 image: DecorationImage(
@@ -140,7 +141,7 @@ class OurFeaturesScreen extends StatelessWidget {
                           ),
 
                           child: Text(
-                            'Our',
+                            '',
                             style: TextStyle(
                               color: Colors.black,
                               fontFamily: 'Poppins',
@@ -157,7 +158,7 @@ class OurFeaturesScreen extends StatelessWidget {
                           ),
 
                           child: Text(
-                            'Features',
+                            '',
                             style: TextStyle(
                               color: Colors.black,
                               fontFamily: 'Poppins',
@@ -200,7 +201,7 @@ class OurFeaturesScreen extends StatelessWidget {
                         padding: EdgeInsets.only(left: 20),
                         alignment: Alignment.centerLeft,
                         height: 50,
-                        width: 120,
+                        width: 150,
                         // color: HexColor('#79B6FC'),
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
@@ -211,7 +212,7 @@ class OurFeaturesScreen extends StatelessWidget {
                           ),
                         ),
                         child: Text(
-                          'Features',
+                          'Our Features',
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
