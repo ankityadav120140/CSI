@@ -26,12 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76710970-400d-4d56-9573-6b664c29a631" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/lib/screens/contact_us_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/csi/lib/screens/contact_us_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/lib/screens/java_and_android.dart" beforeDir="false" afterPath="$PROJECT_DIR$/csi/lib/screens/java_and_android.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/lib/screens/service_domain_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/csi/lib/screens/service_domain_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csi/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/csi/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
