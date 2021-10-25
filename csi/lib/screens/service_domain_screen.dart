@@ -41,62 +41,68 @@ class ServiceDomain extends StatelessWidget {
         right: 2,
         bottom: 30,
       ),
-      child: Row(
-        children: <Widget>[
-          Container(
-            width: 130,
-            height: 250,
-            margin: EdgeInsets.only(right: 10, bottom: 10),
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                  img,
-                ),
-                fit: BoxFit.contain,
-              ),
-            ),
-          ),
-          Container(
-            // height: 275,
-            width: 185,
-            margin: EdgeInsets.only(left: 10, right: 10),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Container(
-                  margin: EdgeInsets.only(bottom: 10),
-                  child: Text(
-                    title1,
-                    style: GoogleFonts.poppins(
-                        color: Colors.black,
-                        fontSize: 30,
-                        height: 1,
-                        fontWeight: FontWeight.w500),
-                    // style: TextStyle(
-                    //   color: Colors.black,
-                    //   fontSize: 35,
-                    //   fontFamily: 'PlayfairDisplay',
-                    //   fontWeight: FontWeight.w500,
-
-                    // ),
+      child: Expanded(
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              child: Container(
+                width: 130,
+                height: 250,
+                margin: EdgeInsets.only(right: 10, bottom: 10),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      img,
+                    ),
+                    fit: BoxFit.contain,
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.only(top: 26),
-                  child: Text(para,
-                      style: TextStyle(
-                        color: Colors.black.withOpacity(0.6),
-                        fontSize: 16,
-                        letterSpacing: 1.6,
-                        height: 1.4,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w400,
-                      )),
-                ),
-              ],
+              ),
             ),
-          ),
-        ],
+            Expanded(
+              child: Container(
+                // height: 275,
+                width: 185,
+                margin: EdgeInsets.only(left: 10, right: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      child: Text(
+                        title1,
+                        style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 30,
+                            height: 1,
+                            fontWeight: FontWeight.w500),
+                        // style: TextStyle(
+                        //   color: Colors.black,
+                        //   fontSize: 35,
+                        //   fontFamily: 'PlayfairDisplay',
+                        //   fontWeight: FontWeight.w500,
+
+                        // ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 26),
+                      child: Text(para,
+                          style: TextStyle(
+                            color: Colors.black.withOpacity(0.6),
+                            fontSize: 16,
+                            letterSpacing: 1.6,
+                            height: 1.4,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w400,
+                          )),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -131,62 +137,68 @@ class ServiceDomain extends StatelessWidget {
         right: 2,
         bottom: 30,
       ),
-      child: Row(
-        children: <Widget>[
-          Container(
-            // height: 275,
-            width: 185,
-            margin: EdgeInsets.only(left: 10, right: 10),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Container(
-                  margin: EdgeInsets.only(bottom: 10),
-                  child: Text(
-                    title1,
-                    style: GoogleFonts.poppins(
-                        color: Colors.black,
-                        fontSize: 30,
-                        height: 1,
-                        fontWeight: FontWeight.w500),
-                    // style: TextStyle(
-                    //   color: Colors.black,
-                    //   fontSize: 35,
-                    //   fontFamily: 'PlayfairDisplay',
-                    //   fontWeight: FontWeight.w500,
+      child: Expanded(
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              child: Container(
+                // height: 275,
+                width: 185,
+                margin: EdgeInsets.only(left: 10, right: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      child: Text(
+                        title1,
+                        style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 30,
+                            height: 1,
+                            fontWeight: FontWeight.w500),
+                        // style: TextStyle(
+                        //   color: Colors.black,
+                        //   fontSize: 35,
+                        //   fontFamily: 'PlayfairDisplay',
+                        //   fontWeight: FontWeight.w500,
 
-                    // ),
-                  ),
+                        // ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 26),
+                      child: Text(para,
+                          style: TextStyle(
+                            color: Colors.black.withOpacity(0.6),
+                            fontSize: 16,
+                            letterSpacing: 1.6,
+                            height: 1.4,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w400,
+                          )),
+                    ),
+                  ],
                 ),
-                Container(
-                  margin: EdgeInsets.only(top: 26),
-                  child: Text(para,
-                      style: TextStyle(
-                        color: Colors.black.withOpacity(0.6),
-                        fontSize: 16,
-                        letterSpacing: 1.6,
-                        height: 1.4,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w400,
-                      )),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            width: 130,
-            height: 250,
-            margin: EdgeInsets.only(right: 10, bottom: 10),
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                  img,
-                ),
-                fit: BoxFit.contain,
               ),
             ),
-          ),
-        ],
+            Expanded(
+              child: Container(
+                width: 130,
+                height: 250,
+                margin: EdgeInsets.only(right: 10, bottom: 10),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      img,
+                    ),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
