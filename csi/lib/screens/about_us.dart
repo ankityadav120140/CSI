@@ -66,7 +66,7 @@ class _aboutUsState extends State<aboutUs> {
                     // padding: EdgeInsets.all(30),
 
                     child: Text(
-                      'CSI',
+                      '',
                       style: TextStyle(
                         color: Colors.black,
                         fontFamily: 'Poppins',

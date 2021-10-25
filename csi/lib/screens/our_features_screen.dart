@@ -14,7 +14,8 @@ class OurFeaturesScreen extends StatelessWidget {
 
   Widget _cards(String title1, String para) {
     return Container(
-      height: 300,
+
+      // height: 300,
       width: double.infinity,
       decoration: BoxDecoration(
         color: HexColor('#E7F3FF'),
@@ -42,6 +43,7 @@ class OurFeaturesScreen extends StatelessWidget {
         top: 30,
         left: 23,
         right: 5,
+        bottom: 50,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

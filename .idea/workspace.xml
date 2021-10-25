@@ -27,13 +27,16 @@
   <component name="ChangeListManager">
     <list default="true" id="76710970-400d-4d56-9573-6b664c29a631" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csi/lib/screens/about_us.dart" beforeDir="false" afterPath="$PROJECT_DIR$/csi/lib/screens/about_us.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csi/lib/screens/our_features_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/csi/lib/screens/our_features_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csi/lib/screens/service_domain_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/csi/lib/screens/service_domain_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[IJUC4DZHHEIJIZP7]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -125,22 +128,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="147" y="179" width="544" height="567" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1634820049299" />
-    <state width="1481" height="196" key="GridCell.Tab.0.bottom" timestamp="1635072305956">
+    <state width="1481" height="196" key="GridCell.Tab.0.bottom" timestamp="1635169619883">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="196" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1635072305956" />
-    <state width="1481" height="196" key="GridCell.Tab.0.center" timestamp="1635072305956">
+    <state width="1481" height="196" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1635169619883" />
+    <state width="1481" height="196" key="GridCell.Tab.0.center" timestamp="1635169619883">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="196" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1635072305956" />
-    <state width="1481" height="196" key="GridCell.Tab.0.left" timestamp="1635072305956">
+    <state width="1481" height="196" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1635169619883" />
+    <state width="1481" height="196" key="GridCell.Tab.0.left" timestamp="1635169619879">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="196" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1635072305956" />
-    <state width="1481" height="196" key="GridCell.Tab.0.right" timestamp="1635072305956">
+    <state width="1481" height="196" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1635169619879" />
+    <state width="1481" height="196" key="GridCell.Tab.0.right" timestamp="1635169619883">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1481" height="196" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1635072305956" />
+    <state width="1481" height="196" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1635169619883" />
     <state x="93" y="0" width="1457" height="647" key="dock-window-1" timestamp="1634845817451">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
