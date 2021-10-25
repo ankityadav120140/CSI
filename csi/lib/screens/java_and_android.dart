@@ -424,6 +424,7 @@ class _java_and_androidState extends State<java_and_android> {
                       return buildImage(wImg, index);
                     },
                     options: CarouselOptions(
+
                         height: 400,
                         enlargeCenterPage: true,
                         enableInfiniteScroll: false,

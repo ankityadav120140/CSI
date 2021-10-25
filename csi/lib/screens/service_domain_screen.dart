@@ -13,6 +13,7 @@ class ServiceDomain extends StatelessWidget {
   Widget _cards(String title1, String para, String img) {
     return Container(
       // height: 300,
+      width: double.infinity,
       decoration: BoxDecoration(
         color: HexColor('#E7F3FF'),
         borderRadius: BorderRadius.circular(40),
