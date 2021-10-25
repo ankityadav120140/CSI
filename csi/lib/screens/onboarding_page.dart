@@ -14,19 +14,20 @@ class OnBoardingPage extends StatelessWidget {
         pages: [
           PageViewModel(
             title: 'About our Team',
-            body: 'The quick brown fox jumps right over the around lazy dog.',
+            body:
+                'CSI has been highly successful in setting highest benchmarks in the field of professional competence with high quality commitment.',
             image: buildImage('assets/images/team ob.png'),
             decoration: getPageDecoration(),
           ),
           PageViewModel(
             title: 'Get to know Us',
-            body: 'The quick brown fox jumps right over the aound lazy dog',
+            body: 'website: https://csiakgec.in/ \n Instagram: csi_akgec',
             image: buildImage('assets/images/know us ob.png'),
             decoration: getPageDecoration(),
           ),
           PageViewModel(
             title: "Let's get Started",
-            body: 'The man who never reads lives only one',
+            body: 'Join the journey to the infinite possibilities.',
             image: buildImage('assets/images/started ob.png'),
             decoration: getPageDecoration(),
           ),

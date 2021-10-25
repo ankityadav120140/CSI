@@ -58,7 +58,7 @@ List<ThirdYear> thirdYearData = const [
     name: 'Ankit Yadav',
     githubUrl: 'https://github.com/ankityadav120140',
     linkedinUrl: 'https://www.linkedin.com/in/ankit-yadav-b54a93135',
-    facebookUrl: 'https://www.instagram.com/last__virus/',
+    facebookUrl: 'https://www.instagram.com/ankit_yadav_1705/',
     imageUrl: 'assets/images/thirdYear/Ankit Yadav.jpg',
   ),
   ThirdYear(
