@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 decoration: BoxDecoration(
                   color: HexColor('#E7F3FF'),
                   image: DecorationImage(
-                    image: AssetImage('assets/images/home_page_bg.png'),
+                    image: AssetImage('assets/images/in_office.png'),
                     fit: BoxFit.fitHeight,
                   ),
                 ),

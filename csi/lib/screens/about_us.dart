@@ -30,11 +30,11 @@ class _aboutUsState extends State<aboutUs> {
             Container(
               margin: EdgeInsets.only(left: 10),
               width: double.infinity,
-              height: 300,
+              height: 250,
               decoration: BoxDecoration(
                 color: HexColor('#E7F3FF'),
                 image: DecorationImage(
-                  image: AssetImage('assets/images/csi_logo.png'),
+                  image: AssetImage('assets/images/logocsiCenter.png'),
                   fit: BoxFit.contain,
                 ),
               ),
@@ -66,7 +66,7 @@ class _aboutUsState extends State<aboutUs> {
                     // padding: EdgeInsets.all(30),
 
                     child: Text(
-                      'CSI',
+                      '',
                       style: TextStyle(
                         color: Colors.black,
                         fontFamily: 'Poppins',

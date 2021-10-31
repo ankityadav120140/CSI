@@ -65,7 +65,7 @@ class ContactUs extends StatelessWidget {
                             // ),
 
                             child: Text(
-                              'Contact',
+                              '',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontFamily: 'Poppins',
@@ -82,7 +82,7 @@ class ContactUs extends StatelessWidget {
                             // ),
 
                             child: Text(
-                              'Us',
+                              '',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontFamily: 'Poppins',
@@ -203,7 +203,7 @@ class ContactUs extends StatelessWidget {
                                     child: FittedBox(
                                       fit: BoxFit.scaleDown,
                                       child: Text(
-                                        '- Basic IT Lab, Third Floor, CS-IT Block, Ajay Kumar Garg \n  Engineering College, Ghaziabad - 201009',
+                                        '- Basic IT Lab, Third Floor, CS-IT Block, Ajay Kumar Garg \n  Engineering College,\n Ghaziabad - 201009',
                                         style: TextStyle(
                                           color: Colors.black,
                                           fontFamily: 'Roboto-Regular',
