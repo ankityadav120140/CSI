@@ -1,4 +1,5 @@
 // ignore_for_file: file_names, prefer_const_constructors, use_key_in_widget_constructors, avoid_print, override_on_non_overriding_member
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -130,8 +131,10 @@ class _InputFieldState extends State<InputField> {
                   decoration: InputDecoration(
                     hintText: "Enter your Branch",
                     hintStyle: TextStyle(color: Colors.grey),
+                   
 
                   ),
+
                 ),
               ),
             ],
@@ -201,7 +204,7 @@ class _InputFieldState extends State<InputField> {
                               return 'Please enter your email';
                              }
                           else if(!value.contains('@akgec.ac.in')){
-                            return 'Please your college email';
+                            return 'Please enter your college email';
                             }
                           return null;
                        },

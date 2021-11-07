@@ -13,6 +13,7 @@ class ServiceDomain extends StatelessWidget {
   Widget _cards(String title1, String para, String img) {
     return Container(
       // height: 300,
+      width: double.infinity,
       decoration: BoxDecoration(
         color: HexColor('#E7F3FF'),
         borderRadius: BorderRadius.circular(40),
@@ -68,20 +69,23 @@ class ServiceDomain extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       margin: EdgeInsets.only(bottom: 10),
-                      child: Text(
-                        title1,
-                        style: GoogleFonts.poppins(
-                            color: Colors.black,
-                            fontSize: 30,
-                            height: 1,
-                            fontWeight: FontWeight.w500),
-                        // style: TextStyle(
-                        //   color: Colors.black,
-                        //   fontSize: 35,
-                        //   fontFamily: 'PlayfairDisplay',
-                        //   fontWeight: FontWeight.w500,
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          title1,
+                          style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontSize: 30,
+                              height: 1,
+                              fontWeight: FontWeight.w500),
+                          // style: TextStyle(
+                          //   color: Colors.black,
+                          //   fontSize: 35,
+                          //   fontFamily: 'PlayfairDisplay',
+                          //   fontWeight: FontWeight.w500,
 
-                        // ),
+                          // ),
+                        ),
                       ),
                     ),
                     Container(
@@ -149,20 +153,23 @@ class ServiceDomain extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       margin: EdgeInsets.only(bottom: 10),
-                      child: Text(
-                        title1,
-                        style: GoogleFonts.poppins(
-                            color: Colors.black,
-                            fontSize: 30,
-                            height: 1,
-                            fontWeight: FontWeight.w500),
-                        // style: TextStyle(
-                        //   color: Colors.black,
-                        //   fontSize: 35,
-                        //   fontFamily: 'PlayfairDisplay',
-                        //   fontWeight: FontWeight.w500,
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          title1,
+                          style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontSize: 30,
+                              height: 1,
+                              fontWeight: FontWeight.w500),
+                          // style: TextStyle(
+                          //   color: Colors.black,
+                          //   fontSize: 35,
+                          //   fontFamily: 'PlayfairDisplay',
+                          //   fontWeight: FontWeight.w500,
 
-                        // ),
+                          // ),
+                        ),
                       ),
                     ),
                     Container(
@@ -354,7 +361,7 @@ class ServiceDomain extends StatelessWidget {
                               'We, at CSI, have a team full of innovators and original thinkers imbued with the ability to turn the imaginations into a visually pleasing vista of creativity.',
                               'assets/images/graphicDev.png'),
                           _cardsr(
-                              'Blockchain Technology',
+                              'Blockchain \nTechnology',
                               'We develop and work on the Blockchain technology. Our team focus on basic fundamentals of Blockchain to establish a task and uses Blockchain Programming to perform various secured projects.',
                               'assets/images/blockchainTech.png'),
                         ],

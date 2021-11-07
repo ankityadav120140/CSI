@@ -200,16 +200,17 @@ class ContactUs extends StatelessWidget {
                                     ),
                                   ),
                                   Container(
-                                    child: FittedBox(
-                                      fit: BoxFit.scaleDown,
-                                      child: Text(
-                                        '- Basic IT Lab, Third Floor, CS-IT Block, Ajay Kumar Garg \n  Engineering College,\n Ghaziabad - 201009',
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontFamily: 'Roboto-Regular',
-                                          fontSize: 13,
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          '- Basic IT Lab, Third Floor, \n CS-IT Block, Ajay Kumar Garg Engineering College,\n Ghaziabad - 201009',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontFamily: 'Roboto-Regular',
+                                            fontSize: 13,
+                                          ),
                                         ),
-                                      ),
+                                      ],
                                     ),
                                   ),
                                 ],
